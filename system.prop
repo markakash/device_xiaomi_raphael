@@ -175,3 +175,7 @@ ro.vendor.qti.sys.fw.bg_apps_limit=60
 
 #Enable ZRAM
 ro.vendor.qti.config.zram=true
+
+#IOP properties
+vendor.iop.enable_uxe=1
+vendor.iop.enable_prefetch_ofr=1
