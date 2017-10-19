@@ -589,4 +589,15 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!--  Wipower  -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.wipower</name>
+        <transport>hwbinder</transport>
+        <impl level="generic"/>
+        <version>1.0</version>
+        <interface>
+            <name>IWipower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
