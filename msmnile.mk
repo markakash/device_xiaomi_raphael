@@ -190,3 +190,6 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 KMGK_USE_QTI_SERVICE := false
+
+# Enable flag to support slow devices
+TARGET_PRESIL_SLOW_BOARD := true
