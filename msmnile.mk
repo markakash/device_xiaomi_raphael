@@ -25,7 +25,7 @@ ifeq ($(ENABLE_VENDOR_IMAGE), true)
 TARGET_USES_QTIC := false
 
 endif
-TARGET_KERNEL_VERSION := next
+TARGET_KERNEL_VERSION := 4.14
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
 
