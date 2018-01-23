@@ -146,3 +146,6 @@ ADD_RADIO_FILES := true
 
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
+
+#Disable LM
+TARGET_USES_LM := false
