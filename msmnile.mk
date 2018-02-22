@@ -98,6 +98,7 @@ AUDIO_DLKM += audio_wcd9360.ko
 AUDIO_DLKM += audio_wcd_spi.ko
 AUDIO_DLKM += audio_native.ko
 AUDIO_DLKM += audio_machine_msmnile.ko
+AUDIO_DLKM += audio_wcd934x.ko
 PRODUCT_PACKAGES += $(AUDIO_DLKM)
 
 PRODUCT_PACKAGES += fs_config_files
