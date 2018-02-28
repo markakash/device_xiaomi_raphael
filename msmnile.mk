@@ -225,3 +225,5 @@ KMGK_USE_QTI_SERVICE := false
 
 # Enable flag to support slow devices
 TARGET_PRESIL_SLOW_BOARD := true
+
+ENABLE_VENDOR_RIL_SERVICE := true
