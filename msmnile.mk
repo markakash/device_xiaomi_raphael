@@ -22,8 +22,8 @@ ifeq ($(ENABLE_VENDOR_IMAGE), true)
 #Comment on msm8998 tree says that QTIC does not
 # yet support system/vendor split. So disabling it
 # for msmnile as well
-TARGET_USES_QTIC := false
-TARGET_USES_QTIC_EXTENSION := false
+#TARGET_USES_QTIC := false
+#TARGET_USES_QTIC_EXTENSION := false
 
 endif
 TARGET_KERNEL_VERSION := 4.14
