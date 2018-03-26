@@ -167,7 +167,7 @@ ro.kernel.qemu.gles=0
 sdm.debug.disable_scalar=0
 qemu.hw.mainkeys=0
 sdm.debug.disable_inline_rotator=1
-sdm.debug.enable_null_display=1
+sdm.debug.enable_null_display=0
 sdm.debug.disable_excl_rect=1
 
 #Increase cached app limit
