@@ -53,6 +53,9 @@ ifneq ($(AB_OTA_UPDATER),true)
     TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
 endif
 
+#Enable Charging Icon
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+
 #Enable split vendor image
 ENABLE_VENDOR_IMAGE := true
 ifeq ($(ENABLE_VENDOR_IMAGE), true)
