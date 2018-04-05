@@ -59,7 +59,7 @@ service sec_nvm /vendor/bin/sec_nvm
     group system
 
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
+    mkdir /vendor/data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
@@ -263,19 +263,18 @@ service imsdatadaemon /system/vendor/bin/imsdatadaemon
     group system wifi radio inet log diag
     disabled
 
-#service mdm_helper /system/bin/mdm_helper
-#    class core
-#    onrestart setprop ro.service.mdm_helper_restarted "true"
-#    disabled
-#
+service mdm_helper /vendor/bin/mdm_helper
+    class core
+    disabled
+
 #service mdm_helper_proxy /system/bin/mdm_helper_proxy
 #    class core
 #    disabled
-#
-#service mdm_launcher /system/bin/sh /init.mdm.sh
-#    class main
-#    oneshot
-#
+
+service mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
+    class main
+    oneshot
+
 #service qcamerasvr /system/bin/mm-qcamera-daemon
 #    class late_start
 #    user camera
