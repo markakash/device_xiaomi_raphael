@@ -12,7 +12,7 @@ PRODUCT_MODEL := msmnile for arm64
 TARGET_USES_AOSP := true
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
-#BOARD_HAVE_QCOM_FM := true
+BOARD_HAVE_QCOM_FM := true
 
 #Default vendor image configuration
 ifeq ($(ENABLE_VENDOR_IMAGE),)
