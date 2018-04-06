@@ -23,6 +23,9 @@ BOARD_SECCOMP_POLICY := device/qcom/$(TARGET_BOARD_PLATFORM)/seccomp
 TARGET_NO_BOOTLOADER := false
 TARGET_USES_UEFI := true
 TARGET_NO_KERNEL := false
+
+TARGET_USES_IOPHAL := true
+
 BOARD_PRESIL_BUILD := true
 -include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
 
