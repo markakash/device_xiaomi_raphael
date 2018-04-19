@@ -144,6 +144,7 @@ service spdaemon /vendor/bin/spdaemon
     class core
     user system
     group system
+    shutdown critical
 
 #service mpdecision /system/vendor/bin/mpdecision --avg_comp
 #   user root
