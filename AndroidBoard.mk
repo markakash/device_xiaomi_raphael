@@ -31,26 +31,6 @@ DTC := $(HOST_OUT_EXECUTABLES)/dtc$(HOST_EXECUTABLE_SUFFIX)
 TARGET_KERNEL_MAKE_ENV := DTC_EXT=dtc$(HOST_EXECUTABLE_SUFFIX)
 TARGET_KERNEL_MAKE_ENV += CONFIG_BUILD_ARM64_DT_OVERLAY=y
 
-#Enable llvm support for kernel
-KERNEL_LLVM_SUPPORT := true
-
-#Enable sd-llvm suppport for kernel
-KERNEL_SD_LLVM_SUPPORT := true
-
-ifeq ($(KERNEL_LLVM_SUPPORT), true)
-  ifeq ($(KERNEL_SD_LLVM_SUPPORT), true)  #Using sd-llvm compiler
-    ifeq ($(shell echo $(SDCLANG_PATH_2) | head -c 1),/)
-       KERNEL_LLVM_BIN := $(SDCLANG_PATH_2)/clang
-    else
-       KERNEL_LLVM_BIN := $(ANDROID_BUILD_TOP)/$(SDCLANG_PATH_2)/clang
-    endif
-    $(warning "Using sdllvm" $(KERNEL_LLVM_BIN))
-  else
-     KERNEL_LLVM_BIN := $(ANDROID_BUILD_TOP)/$(CLANG) #Using aosp-llvm compiler
-    $(warning "Using aosp-llvm" $(KERNEL_LLVM_BIN))
-  endif
-endif
-
 include $(TARGET_KERNEL_SOURCE)/AndroidKernel.mk
 $(TARGET_PREBUILT_KERNEL): $(DTC)
 
