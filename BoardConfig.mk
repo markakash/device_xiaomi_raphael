@@ -104,6 +104,11 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko
 #    $(KERNEL_MODULES_OUT)/rdbg.ko
 
+# install lkdtm only for userdebug and eng build variants
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/lkdtm.ko
+endif
+
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 TARGET_USES_QCOM_BSP := false
