@@ -31,6 +31,7 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_wglink audio_q6_pdr audio_q6_notifier audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_wcd audio_swr audio_platform audio_hdmi audio_wcd_spi audio_stub audio_wcd_core audio_wsa881x audio_wcd9360 audio_hdmi audio_machine_msmnile
     write /proc/sys/kernel/sched_boost 1
     symlink /data/tombstones /tombstones
+
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
@@ -42,8 +43,7 @@ on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on fs
-    wait /dev/block/platform/soc/8804000.sdhci
-    symlink /dev/block/platform/soc/8804000.sdhci /dev/block/bootdevice
+    exec u:r:vendor_init:s0 -- /vendor/bin/init.qti.getbootdevice.sh
     mount_all /vendor/etc/fstab.qcom
     restorecon_recursive /persist
     mkdir /persist/data 0700 system system
