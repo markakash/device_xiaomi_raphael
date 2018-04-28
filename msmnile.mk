@@ -5,7 +5,7 @@ $(call inherit-product, device/qcom/common/common64.mk)
 
 PRODUCT_NAME := msmnile
 PRODUCT_DEVICE := msmnile
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := qti
 PRODUCT_MODEL := msmnile for arm64
 
 #Initial bringup flags
