@@ -124,6 +124,10 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
+on charger
+    start hvdcp_opti
+    start power_off_alarm
+
 ## import cne init file
 #on post-fs
 #    export LD_PRELOAD /vendor/lib/libNimsWrap.so
@@ -375,3 +379,8 @@ service seempd /system/bin/seempd
     user system
     group system sdcard_rw
     socket seempdw dgram 0666 system system
+
+service hvdcp_opti /system/vendor/bin/hvdcp_opti
+    class main
+    user root
+    group system wakelock
