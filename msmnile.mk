@@ -134,6 +134,8 @@ PRODUCT_PACKAGES += update_engine \
 #Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
 
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/sdm845/framework_manifest.xml
+
 #Healthd packages
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl \
