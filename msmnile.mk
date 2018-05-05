@@ -250,6 +250,9 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 
 KMGK_USE_QTI_SERVICE := true
 
+#Enable KEYMASTER 4.0
+ENABLE_KM_4_0 := true
+
 # Enable flag to support slow devices
 TARGET_PRESIL_SLOW_BOARD := true
 
