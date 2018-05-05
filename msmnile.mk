@@ -46,9 +46,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 BOARD_FRP_PARTITION_NAME := frp
 
-# WLAN chipset
-WLAN_CHIPSET := qca_cld3
-
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
@@ -185,33 +182,14 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
     android.hardware.contexthub@1.0-service
 
-# WLAN host driver
-ifneq ($(WLAN_CHIPSET),)
-PRODUCT_PACKAGES += $(WLAN_CHIPSET)_wlan.ko
-endif
-
 # system prop for Bluetooth SOC type
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=cherokee \
     vendor.qcom.bluetooth.soc=cherokee
 
-# WLAN driver configuration file
-PRODUCT_COPY_FILES += \
-    device/qcom/msmnile/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/qcom/msmnile/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
-
 # MIDI feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
-
-PRODUCT_PACKAGES += \
-    wpa_supplicant_overlay.conf \
-    p2p_supplicant_overlay.conf
-
-#for wlan
-PRODUCT_PACKAGES += \
-    wificond \
-    wifilogd
 
 # Sensor conf files
 PRODUCT_COPY_FILES += \
@@ -251,3 +229,8 @@ ENABLE_KM_4_0 := true
 TARGET_PRESIL_SLOW_BOARD := true
 
 ENABLE_VENDOR_RIL_SERVICE := true
+
+#----------------------------------------------------------------------
+# wlan specific
+#----------------------------------------------------------------------
+include device/qcom/wlan/msmnile/wlan.mk

@@ -100,8 +100,7 @@ BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/audio_native.ko \
     $(KERNEL_MODULES_OUT)/audio_machine_msmnile.ko \
     $(KERNEL_MODULES_OUT)/wil6210.ko \
-    $(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko \
-    $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko
+    $(KERNEL_MODULES_OUT)/msm_11ad_proxy.ko
 #    $(KERNEL_MODULES_OUT)/rdbg.ko
 
 # install lkdtm only for userdebug and eng build variants
@@ -178,3 +177,10 @@ TARGET_USES_INTERACTION_BOOST := true
 
 #Enable DRM plugins 64 bit compilation
 TARGET_ENABLE_MEDIADRM_64 := true
+
+#----------------------------------------------------------------------
+# wlan specific
+#----------------------------------------------------------------------
+ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
+include device/qcom/wlan/msmnile/BoardConfigWlan.mk
+endif
