@@ -109,7 +109,9 @@ BOARD_VENDOR_KERNEL_MODULES := \
 
 # install lkdtm only for userdebug and eng build variants
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/lkdtm.ko
+    ifeq (,$(findstring perf_defconfig, $(KERNEL_DEFCONFIG)))
+        BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/lkdtm.ko
+    endif
 endif
 
 TARGET_USES_ION := true
