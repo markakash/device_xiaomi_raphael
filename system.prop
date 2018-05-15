@@ -18,17 +18,8 @@ DEVICE_PROVISIONED=1
 # Set network mode to (T/L/G/W/1X/EVDO, T/G/W/L) for 7+5 mode device on DSDS mode
 ro.telephony.default_network=22,20
 
-debug.sf.hw=0
-debug.egl.hw=0
-debug.sf.latch_unsignaled=1
-
-#debug.composition.type=c2d
-#persist.hwc.mdpcomp.enable=true
-debug.mdpcomp.logs=0
-debug.sf.enable_hwc_vds=1
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
-persist.demo.hdmirotationlock=false
 
 #ro.hdmi.enable=true
 #persist.speaker.prot.enable=false
@@ -74,9 +65,6 @@ ro.opengles.version=196610
 
 # system property for maximum number of HFP client connections
 bt.max.hfpclient.connections=1
-
-# System property for cabl
-ro.qualcomm.cabl=1
 
 #
 # System props for telephony
@@ -165,16 +153,10 @@ ro.hwui.text_large_cache_height=1024
 config.disable_rtt=true
 
 #Bringup properties
-debug.gralloc.gfx_ubwc_disable=0
 persist.sys.force_sw_gles=1
 persist.vendor.radio.atfwd.start=false
 ro.kernel.qemu.gles=0
-sdm.debug.disable_scalar=0
 qemu.hw.mainkeys=0
-sdm.debug.disable_inline_rotator=1
-sdm.debug.enable_null_display=0
-sdm.debug.disable_excl_rect=1
-sdm.composition_simulation=0
 
 #Increase cached app limit
 ro.vendor.qti.sys.fw.bg_apps_limit=60
