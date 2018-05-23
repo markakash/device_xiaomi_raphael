@@ -130,7 +130,7 @@ PRODUCT_PACKAGES += update_engine \
 #Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
 
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/sdm845/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/msmnile/framework_manifest.xml
 
 #Healthd packages
 PRODUCT_PACKAGES += \
