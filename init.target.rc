@@ -54,11 +54,8 @@ on post-fs
     start vendor.qseecomd
     exec - system system -- /vendor/bin/init.qti.qseecomd.sh
     write /dev/ipa 1
-
-service sec_nvm /vendor/bin/sec_nvm
-    class core
-    user system
-    group system
+    start vendor.spdaemon
+    start vendor.sec_nvm
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
@@ -157,11 +154,16 @@ service vendor.qseecomd /vendor/bin/qseecomd
     user root
     group root
 
-service spdaemon /vendor/bin/spdaemon
+service vendor.spdaemon /vendor/bin/spdaemon
     class core
     user system
     group system
     shutdown critical
+
+service vendor.sec_nvm /vendor/bin/sec_nvm
+    class core
+    user system
+    group system
 
 #service mpdecision /system/vendor/bin/mpdecision --avg_comp
 #   user root
