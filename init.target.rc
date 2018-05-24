@@ -103,6 +103,8 @@ on boot
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
     setprop sys.usb.configfs 1
 
 #start camera server as daemon
