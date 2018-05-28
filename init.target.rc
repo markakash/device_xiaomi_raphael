@@ -305,6 +305,7 @@ service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
 
 service mdm_helper /vendor/bin/mdm_helper
     class core
+    group system wakelock
     disabled
 
 #service mdm_helper_proxy /system/bin/mdm_helper_proxy
