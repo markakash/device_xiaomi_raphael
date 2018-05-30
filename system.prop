@@ -170,3 +170,6 @@ vendor.iop.enable_prefetch_ofr=1
 
 #Property to enable perf boosts from System Server
 vendor.perf.gestureflingboost.enable=true
+
+#Expose aux camera for below packages
+vendor.camera.aux.packagelist=org.codeaurora.snapcam
