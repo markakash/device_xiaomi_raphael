@@ -144,9 +144,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
 
-# Adding vendor manifest
-PRODUCT_COPY_FILES += \
-    device/qcom/msmnile/vintf.xml:$(TARGET_COPY_OUT_VENDOR)/manifest.xml
+DEVICE_MANIFEST_FILE := device/qcom/msmnile/manifest.xml
+DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
+
 
 #ANT+ stack
 PRODUCT_PACKAGES += \
