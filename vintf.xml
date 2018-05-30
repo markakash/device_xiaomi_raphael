@@ -600,6 +600,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
     </hal>
     <!-- RADIO CONFIG -->
    <hal format="hidl">
