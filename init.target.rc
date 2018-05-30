@@ -67,7 +67,6 @@ on post-fs-data
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
-    mkdir /persist/qti_fp 0700 system system
     mkdir /data/misc/seemp 0700 system system
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
@@ -385,11 +384,6 @@ service hbtp /system/vendor/bin/hbtp_daemon
      user system
      group system
      disabled
-
-service qfp-daemon /vendor/bin/qfp-daemon
-    class late_start
-    user system
-    group system drmrpc diag input
 
 service energy-awareness /system/vendor/bin/energy-awareness
     class main
