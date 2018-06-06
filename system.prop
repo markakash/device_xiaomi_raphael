@@ -166,7 +166,7 @@ ro.vendor.qti.config.zram=true
 
 #IOP properties
 vendor.iop.enable_uxe=1
-vendor.iop.enable_prefetch_ofr=1
+vendor.perf.iop_v3.enable=true
 
 #Property to enable perf boosts from System Server
 vendor.perf.gestureflingboost.enable=true
