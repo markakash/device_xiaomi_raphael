@@ -394,6 +394,28 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                <instance>radioconfig1</instance>
            </interface>
     </hal>
+    <!-- legacy qtiradio service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+           <transport>hwbinder</transport>
+           <version>1.0</version>
+           <interface>
+               <name>IQtiRadio</name>
+               <instance>slot1</instance>
+               <instance>slot2</instance>
+           </interface>
+    </hal>
+    <!-- Hidl service for 5G network apis -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+           <transport>hwbinder</transport>
+           <version>2.0</version>
+           <interface>
+               <name>IQtiRadio</name>
+               <instance>slot1</instance>
+               <instance>slot2</instance>
+           </interface>
+    </hal>
     <!-- IMS RTP Service -->
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
