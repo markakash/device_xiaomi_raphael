@@ -142,6 +142,7 @@ on property:sys.shutdown.requested=*
 on charger
     start hvdcp_opti
     start power_off_alarm
+    setprop sys.usb.configfs 1
 
 ## import cne init file
 #on post-fs
