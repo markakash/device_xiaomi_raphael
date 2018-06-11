@@ -179,5 +179,8 @@ ro.lmk.enhance_batch_kill=true
 ro.lmk.enable_adaptive_lmk=true
 ro.lmk.vmpressure_file_min=80640
 
+#Property to enable scroll pre-obtain view
+ro.vendor.scroll.preobtain.enable=true
+
 #Expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam
