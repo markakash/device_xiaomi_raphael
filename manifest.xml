@@ -850,4 +850,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Naural Network HAL -->
+    <hal format="hidl">
+        <name>android.hardware.neuralnetworks</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
