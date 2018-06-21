@@ -184,3 +184,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
 include device/qcom/wlan/msmnile/BoardConfigWlan.mk
 endif
+
+#Enable VNDK Compliance
+BOARD_VNDK_VERSION:=current
