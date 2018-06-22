@@ -181,6 +181,9 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service \
 
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator@1.2-service
+
 # Context hub HAL
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
