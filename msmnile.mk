@@ -179,10 +179,6 @@ PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-service_64
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service \
-
-PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator@1.2-service
 
 # Context hub HAL
