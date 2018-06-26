@@ -202,6 +202,7 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
 
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
+    group system wakelock
     disabled
 
 service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
