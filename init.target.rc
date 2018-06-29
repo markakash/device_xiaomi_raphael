@@ -67,7 +67,6 @@ on post-fs-data
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
-    mkdir /data/misc/seemp 0700 system system
     mkdir /data/vendor/tloc 0700 system drmrpc
     mkdir /data/vendor/nnhal 0700 system system
 
@@ -241,12 +240,6 @@ service vendor.energy-awareness /vendor/bin/energy-awareness
     user system
     group system
     oneshot
-
-service seempd /system/bin/seempd
-    class late_start
-    user system
-    group system sdcard_rw
-    socket seempdw dgram 0666 system system
 
 service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main
