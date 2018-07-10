@@ -226,6 +226,10 @@ KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTAL
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
 
+#Exclude vibrator from InputManager
+PRODUCT_COPY_FILES += \
+    device/qcom/msmnile/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
+
 #Enable full treble flag
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
