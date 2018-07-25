@@ -250,6 +250,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
        <interface>
            <name>IKeymasterDevice</name>
            <instance>default</instance>
+           <instance>strongbox</instance>
        </interface>
     </hal>
     <!-- gatekeeper -->
