@@ -49,7 +49,6 @@ persist.mm.enable.prefetch=true
 # system props for the data modules
 #
 ro.vendor.use_data_netmgrd=true
-persist.data.netmgrd.qos.enable=true
 persist.vendor.data.mode=concurrent
 
 #system props for time-services
