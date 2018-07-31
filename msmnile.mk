@@ -257,3 +257,5 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # wlan specific
 #----------------------------------------------------------------------
 include device/qcom/wlan/msmnile/wlan.mk
+
+TARGET_MOUNT_POINTS_SYMLINKS := false
