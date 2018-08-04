@@ -10,7 +10,7 @@ PRODUCT_BRAND := qti
 PRODUCT_MODEL := msmnile for arm64
 
 #Initial bringup flags
-TARGET_USES_AOSP := true
+TARGET_USES_AOSP := false
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
 
@@ -248,10 +248,12 @@ ENABLE_STRONGBOX_KM := true
 
 DEVICE_PACKAGE_OVERLAYS += device/qcom/msmnile/overlay
 
-# Enable flag to support slow devices
-TARGET_PRESIL_SLOW_BOARD := true
 
 ENABLE_VENDOR_RIL_SERVICE := true
+#Enable vndk-sp Libraries
+PRODUCT_PACKAGES += vndk_package
+
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE:=true
 
 #----------------------------------------------------------------------
 # wlan specific
@@ -259,3 +261,11 @@ ENABLE_VENDOR_RIL_SERVICE := true
 include device/qcom/wlan/msmnile/wlan.mk
 
 TARGET_MOUNT_POINTS_SYMLINKS := false
+
+# propery "ro.vendor.build.security_patch" is checked for
+# # CTS compliance so need to make sure its set with following
+# # format "YYYY-MM-DD" on production devices.
+# #
+ifeq ($(ENABLE_VENDOR_IMAGE), true)
+ VENDOR_SECURITY_PATCH := 2018-06-05
+endif

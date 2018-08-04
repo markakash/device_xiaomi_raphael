@@ -26,7 +26,6 @@ TARGET_NO_KERNEL := false
 
 TARGET_USES_IOPHAL := true
 
-BOARD_PRESIL_BUILD := true
 -include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
 
 # Some framework code requires this to enable BT
@@ -192,6 +191,14 @@ TARGET_ENABLE_MEDIADRM_64 := true
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
 include device/qcom/wlan/msmnile/BoardConfigWlan.mk
 endif
+
+ifeq ($(ENABLE_VENDOR_IMAGE), false)
+	$(error "Vendor Image is mandatory !!")
+endif
+
+#Flag to enable System SDK Requirements.
+#All vendor APK will be compiled against system_current API set.
+BOARD_SYSTEMSDK_VERSIONS:=28
 
 #Enable VNDK Compliance
 BOARD_VNDK_VERSION:=current
