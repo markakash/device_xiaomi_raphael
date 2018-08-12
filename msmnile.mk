@@ -37,9 +37,7 @@ KERNEL_SD_LLVM_SUPPORT := true
 TARGET_USES_NQ_NFC := true
 ifeq ($(TARGET_USES_NQ_NFC),true)
 PRODUCT_COPY_FILES += \
-    vendor/nxp/opensource/external/libnfc-nci/halimpl/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    vendor/nxp/opensource/external/libnfc-nci/halimpl/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
-    vendor/nxp/opensource/external/libnfc-nci/halimpl/libnfc-brcm_NCI2_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm_NCI2_0.conf
+    device/qcom/common/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 endif
 
 # default is nosdcard, S/W button enabled in resource
