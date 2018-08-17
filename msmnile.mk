@@ -242,7 +242,7 @@ KMGK_USE_QTI_SERVICE := true
 
 #Enable KEYMASTER 4.0
 ENABLE_KM_4_0 := true
-#Should be enabled only on SM8150
+#Should be enabled only on msmnile
 ENABLE_STRONGBOX_KM := true
 
 DEVICE_PACKAGE_OVERLAYS += device/qcom/msmnile/overlay
