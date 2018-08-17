@@ -14,6 +14,9 @@ TARGET_USES_AOSP := false
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
 
+# RRO configuration
+TARGET_USES_RRO := true
+
 #Default vendor image configuration
 ifeq ($(ENABLE_VENDOR_IMAGE),)
 ENABLE_VENDOR_IMAGE := false
@@ -245,7 +248,9 @@ ENABLE_KM_4_0 := true
 #Should be enabled only on msmnile
 ENABLE_STRONGBOX_KM := true
 
+ifneq ($(strip $(TARGET_USES_RRO)),true)
 DEVICE_PACKAGE_OVERLAYS += device/qcom/msmnile/overlay
+endif
 
 
 ENABLE_VENDOR_RIL_SERVICE := true
