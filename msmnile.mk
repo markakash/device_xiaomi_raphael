@@ -188,6 +188,10 @@ PRODUCT_COPY_FILES += \
     device/qcom/msmnile/init.qti.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.qseecomd.sh \
     device/qcom/msmnile/init.qti.getbootdevice.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.getbootdevice.sh
 
+# Strongbox support
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml
+
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += device/qcom/msmnile/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
