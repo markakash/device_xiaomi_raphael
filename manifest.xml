@@ -378,17 +378,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>Uim1</instance>
         </interface>
     </hal>
-    <!-- radio config -->
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.config</name>
-           <transport>hwbinder</transport>
-           <version>1.0</version>
-           <interface>
-               <name>IConfig</name>
-               <instance>radioconfig0</instance>
-               <instance>radioconfig1</instance>
-           </interface>
-    </hal>
     <!-- legacy qtiradio service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -618,17 +607,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            <instance>SIM2</instance>
            <instance>eSE1</instance>
        </interface>
-    </hal>
-    <!-- RIL OEM HOOK -->
-    <hal format="hidl">
-        <name>android.hardware.radio.deprecated</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOemHook</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
     </hal>
     <!-- VPP Service -->
     <hal format="hidl">
