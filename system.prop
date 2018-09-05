@@ -176,3 +176,6 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
 #enable IZat OptInApp overlay
 persist.vendor.overlay.izat.optin=rro
+
+#Property to enable Mag filter
+persist.vendor.sensors.enable.mag_filter=true
