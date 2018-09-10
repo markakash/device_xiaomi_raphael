@@ -296,5 +296,9 @@ ifeq ($(ENABLE_VENDOR_IMAGE), true)
  VENDOR_SECURITY_PATCH := 2018-06-05
 endif
 
+#Property to enable/disable scroll pre-obtain view
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.scroll.preobtain.enable := false
+
 TARGET_USES_MKE2FS := true
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
