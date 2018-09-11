@@ -185,8 +185,8 @@ ADD_RADIO_FILES := true
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
 
-#Disable LM
-TARGET_USES_LM := false
+#Enable LM
+TARGET_USES_LM := true
 
 #Enable INTERACTION_BOOST
 TARGET_USES_INTERACTION_BOOST := true
