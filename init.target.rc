@@ -41,10 +41,17 @@ on init
     write /dev/stune/foreground/schedtune.colocate 0
     write /dev/stune/top-app/schedtune.colocate 1
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
+    exec u:r:vendor_init:s0 -- /vendor/bin/init.qti.getbootdevice.sh
+    start vendor.qseecomd
+    start keymaster-4-0
+    start keymaster-sb-4-0
+
+on early-fs
+    start vold
 
 on fs
-    exec u:r:vendor_init:s0 -- /vendor/bin/init.qti.getbootdevice.sh
-    mount_all /vendor/etc/fstab.qcom
+    start hwservicemanager
+    mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
@@ -54,11 +61,14 @@ on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-    start vendor.qseecomd
-    exec - system system -- /vendor/bin/init.qti.qseecomd.sh
     write /dev/ipa 1
     start vendor.spdaemon
     start vendor.sec_nvm
+
+on late-fs
+    wait_for_prop hwservicemanager.ready true
+    exec_start wait_for_keymaster
+    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
