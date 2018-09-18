@@ -81,6 +81,13 @@ BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
+#----------------------------------------------------------------------
+# Compile Linux Kernel
+#----------------------------------------------------------------------
+ifeq ($(KERNEL_DEFCONFIG),)
+     KERNEL_DEFCONFIG := $(shell ls ./kernel/msm-4.14/arch/arm64/configs/vendor/ | grep sm8..._defconfig)
+endif
+
 BOARD_VENDOR_KERNEL_MODULES := \
     $(KERNEL_MODULES_OUT)/audio_apr.ko \
     $(KERNEL_MODULES_OUT)/audio_wglink.ko \

@@ -15,13 +15,6 @@ $(BUILT_TARGET_FILES_PACKAGE): $(INSTALLED_BOOTLOADER_MODULE)
 droidcore: $(INSTALLED_BOOTLOADER_MODULE)
 endif
 
-#----------------------------------------------------------------------
-# Compile Linux Kernel
-#----------------------------------------------------------------------
-ifeq ($(KERNEL_DEFCONFIG),)
-     KERNEL_DEFCONFIG := $(shell ls ./kernel/msm-4.14/arch/arm64/configs/vendor/ | grep sm8..._defconfig)
-endif
-
 ifeq ($(TARGET_KERNEL_SOURCE),)
      TARGET_KERNEL_SOURCE := kernel
 endif
