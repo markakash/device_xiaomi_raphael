@@ -301,4 +301,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.scroll.preobtain.enable := false
 
 TARGET_USES_MKE2FS := true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.crypto.volume.filenames_mode = "aes-256-cts" \
+ro.crypto.allow_encrypt_override = true
+
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
