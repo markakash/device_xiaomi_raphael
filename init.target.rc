@@ -168,6 +168,7 @@ on property:sys.shutdown.requested=*
 on charger
     start vendor.hvdcp_opti
     start vendor.power_off_alarm
+    setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
 
