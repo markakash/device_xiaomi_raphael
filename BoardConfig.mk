@@ -216,5 +216,7 @@ endif
 #All vendor APK will be compiled against system_current API set.
 BOARD_SYSTEMSDK_VERSIONS:=28
 
+BUILD_BROKEN_DUP_RULES := true
+
 #Enable VNDK Compliance
 BOARD_VNDK_VERSION:=current
