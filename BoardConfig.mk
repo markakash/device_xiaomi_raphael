@@ -224,3 +224,6 @@ BUILD_BROKEN_DUP_RULES := true
 #Enable VNDK Compliance
 BOARD_VNDK_VERSION:=current
 Q_BU_DISABLE_MODULE := true
+
+#Disable PHONY target checks for initial bringup
+BUILD_BROKEN_PHONY_TARGETS := true
