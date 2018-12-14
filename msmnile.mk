@@ -56,6 +56,20 @@ TARGET_USES_QMAA_OVERRIDE_WFD     := false
 # RRO configuration
 TARGET_USES_RRO := true
 
+TARGET_USES_QMAA := false
+###QMAA Indicator Start###
+
+#Full QMAA HAL List
+QMAA_HAL_LIST := audio video camera display sensors
+
+#Indicator for each enabled QMAA HAL for this target. Each tech team
+#locally verified their QMAA HAL and ensure code is updated/merged,
+#then add their HAL module name to QMAA_ENABLED_HAL_MODULES as a QMAA
+#enabling completion indicator.
+QMAA_ENABLED_HAL_MODULES :=
+
+###QMAA Indicator End###
+
 #Default vendor image configuration
 ifeq ($(ENABLE_VENDOR_IMAGE),)
 ENABLE_VENDOR_IMAGE := false
