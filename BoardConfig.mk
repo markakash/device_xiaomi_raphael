@@ -34,7 +34,7 @@ TARGET_USES_IOPHAL := true
 -include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
 
 # Some framework code requires this to enable BT
-BOARD_HAVE_BLUETOOTH := false
+BOARD_HAVE_BLUETOOTH := true
 BOARD_USES_WIPOWER := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/qcom/common
 
