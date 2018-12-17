@@ -8,7 +8,7 @@ BOARD_AVB_SYSTEM_ROLLBACK_INDEX := 0
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 TARGET_DEFINES_DALVIK_HEAP := true
-$(call inherit-product, device/qcom/common/common64.mk)
+$(call inherit-product, device/qcom/qssi/common64.mk)
 
 #Inherit all except heap growth limit from phone-xhdpi-2048-dalvik-heap.mk
 PRODUCT_PROPERTY_OVERRIDES  += \
@@ -358,3 +358,13 @@ ro.crypto.volume.filenames_mode = "aes-256-cts" \
 ro.crypto.allow_encrypt_override = true
 
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
+
+
+###################################################################################
+# This is the End of target.mk file.
+# Now, Pickup other split product.mk files:
+###################################################################################
+# TODO: Relocate the system product.mk files pickup into qssi lunch, once it is up.
+$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/*.mk)
+$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/vendor/*.mk)
+###################################################################################
