@@ -142,7 +142,7 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-androidkernel-
 
 KERN_CONF_PATH := kernel/msm-4.14/arch/arm64/configs/vendor/
 KERN_CONF_FILE := $(shell ls $(KERN_CONF_PATH) | grep sm8..._defconfig)
