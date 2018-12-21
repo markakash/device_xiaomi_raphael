@@ -45,9 +45,11 @@ abl.elf                 /dev/block/bootdevice/by-name/abl
 devcfg.mbn              /dev/block/bootdevice/by-name/devcfg
 qupv3fw.elf             /dev/block/bootdevice/by-name/qupfw
 storsec.mbn             /dev/block/bootdevice/by-name/storsec
-imagefv.elf             /dev/block/bootdevice/by-name/ImageFv
+imagefv.elf             /dev/block/bootdevice/by-name/imagefv
 vbmeta.img              /dev/block/bootdevice/by-name/vbmeta
 dtbo.img                /dev/block/bootdevice/by-name/dtbo
+multiimgoem.img         /dev/block/bootdevice/by-name/multiimgoem
+multiimgqti.img         /dev/block/bootdevice/by-name/multiimgqti
 
 # filename + .bak       backup partition
 
@@ -65,7 +67,9 @@ qupv3fw.elf.bak         /dev/block/bootdevice/by-name/qupfwbak
 storsec.mbn.bak         /dev/block/bootdevice/by-name/storsecbak
 vbmeta.img.bak          /dev/block/bootdevice/by-name/vbmetabak
 dtbo.img.bak            /dev/block/bootdevice/by-name/dtbobak
-imagefv.elf.bak         /dev/block/bootdevice/by-name/ImageFvbak
+imagefv.elf.bak         /dev/block/bootdevice/by-name/imagefvbak
+multiimgoem.img.bak     /dev/block/bootdevice/by-name/multiimgoembak
+multiimgqti.img.bak     /dev/block/bootdevice/by-name/multiimgqtibak
 
 # For multiple file firmware images that differ from *.mbn and *.bin
 # you can specify filename.* to direct all files to the same location.
