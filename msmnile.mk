@@ -126,9 +126,9 @@ ifneq ($(TARGET_DISABLE_DASH), true)
     PRODUCT_BOOT_JARS += qcmediaplayer
 endif
 
-ifneq ($(strip $(QCPATH)),)
-    PRODUCT_BOOT_JARS += WfdCommon
-endif
+#ifneq ($(strip $(QCPATH)),)
+#    PRODUCT_BOOT_JARS += WfdCommon
+#endif
 
 ifneq ($(strip $(QCPATH)),)
     PRODUCT_BOOT_JARS += libprotobuf-java_mls
