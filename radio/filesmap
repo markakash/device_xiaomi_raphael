@@ -50,6 +50,9 @@ vbmeta.img              /dev/block/bootdevice/by-name/vbmeta
 dtbo.img                /dev/block/bootdevice/by-name/dtbo
 multiimgoem.img         /dev/block/bootdevice/by-name/multiimgoem
 multiimgqti.img         /dev/block/bootdevice/by-name/multiimgqti
+vm-linux.img            /dev/block/bootdevice/by-name/vm-linux
+vm-system.img           /dev/block/bootdevice/by-name/vm-system
+
 
 # filename + .bak       backup partition
 
@@ -70,6 +73,9 @@ dtbo.img.bak            /dev/block/bootdevice/by-name/dtbobak
 imagefv.elf.bak         /dev/block/bootdevice/by-name/imagefvbak
 multiimgoem.img.bak     /dev/block/bootdevice/by-name/multiimgoembak
 multiimgqti.img.bak     /dev/block/bootdevice/by-name/multiimgqtibak
+vm-linux.img.bak        /dev/block/bootdevice/by-name/vm-linuxbak
+vm-system.img.bak       /dev/block/bootdevice/by-name/vm-systembak
+
 
 # For multiple file firmware images that differ from *.mbn and *.bin
 # you can specify filename.* to direct all files to the same location.
