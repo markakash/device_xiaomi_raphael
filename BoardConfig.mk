@@ -29,8 +29,6 @@ TARGET_NO_BOOTLOADER := false
 TARGET_USES_UEFI := true
 TARGET_NO_KERNEL := false
 
-TARGET_USES_IOPHAL := true
-
 -include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
 
 # Some framework code requires this to enable BT
@@ -194,9 +192,6 @@ ADD_RADIO_FILES := true
 
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
-
-#Enable LM
-TARGET_USES_LM := true
 
 #Enable INTERACTION_BOOST
 TARGET_USES_INTERACTION_BOOST := true
