@@ -125,6 +125,7 @@ TARGET_USES_QMAA_OVERRIDE_CAMERA  := false
 TARGET_USES_QMAA_OVERRIDE_GFX     := false
 TARGET_USES_QMAA_OVERRIDE_WFD     := false
 TARGET_USES_QMAA_OVERRIDE_DATA    := false
+TARGET_USES_QMAA_OVERRIDE_GPS     := false
 
 ###########
 #QMAA flags ends
@@ -136,7 +137,7 @@ TARGET_USES_RRO := true
 ###QMAA Indicator Start###
 
 #Full QMAA HAL List
-QMAA_HAL_LIST := audio video camera display sensors
+QMAA_HAL_LIST := audio video camera display sensors gps
 
 #Indicator for each enabled QMAA HAL for this target. Each tech team
 #locally verified their QMAA HAL and ensure code is updated/merged,
