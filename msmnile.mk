@@ -36,7 +36,7 @@ TARGET_USES_QCOM_BSP := false
 #true means QMAA is enabled for system
 #false means QMAA is disabled for system
 
-TARGET_USES_QMAA := true
+TARGET_USES_QMAA := false
 
 #QMAA tech team flag to override global QMAA per tech team
 #true means overriding global QMAA for this tech area
@@ -57,7 +57,6 @@ TARGET_USES_QMAA_OVERRIDE_DATA    := false
 # RRO configuration
 TARGET_USES_RRO := true
 
-TARGET_USES_QMAA := false
 ###QMAA Indicator Start###
 
 #Full QMAA HAL List
