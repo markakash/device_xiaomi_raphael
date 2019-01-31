@@ -264,6 +264,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
+#vendor prop to enable advanced network scanning
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.enableadvancedscan=true
+
 # system prop for enabling QFS (QTI Fingerprint Solution)
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qfp=true
