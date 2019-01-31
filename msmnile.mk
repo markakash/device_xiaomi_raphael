@@ -227,7 +227,7 @@ PRODUCT_PACKAGES += \
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service \
+    android.hardware.configstore@1.2-service \
     android.hardware.broadcastradio@1.0-impl
 
 # FBE support
