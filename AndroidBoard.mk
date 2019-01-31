@@ -109,3 +109,8 @@ endif
 ifneq (, $(wildcard $(shell pwd)/prebuilts/build-tools/linux-x86/bin/make))
     MAKE := $(shell pwd)/prebuilts/build-tools/linux-x86/bin/$(MAKE)
 endif
+
+
+# Transient change to create odm.img for partition table update and flash
+# process update transition
+$(shell if [ ! -f $(PRODUCT_OUT)/odm.img ]; then mkdir -p $(PRODUCT_OUT); touch $(PRODUCT_OUT)/odm.img; fi)
