@@ -115,23 +115,13 @@ PRODUCT_PACKAGES += libGLES_android
 
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
-    device/qcom/msmnile/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    device/qcom/msmnile/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(LOCAL_PATH)/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy \
-    $(LOCAL_PATH)/seccomp/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
 
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
 PRODUCT_PACKAGES += telephony-ext
 
-
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
-
-TARGET_DISABLE_DASH := true
-
-ifneq ($(TARGET_DISABLE_DASH), true)
-    PRODUCT_BOOT_JARS += qcmediaplayer
-endif
 
 #ifneq ($(strip $(QCPATH)),)
 #    PRODUCT_BOOT_JARS += WfdCommon
@@ -144,42 +134,12 @@ endif
 endif
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-#Vendor media profiles
-PRODUCT_COPY_FILES += device/qcom/msmnile/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 #BT library
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
 endif
 
-# Video codec configuration files
-ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msmnile/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
-
-PRODUCT_COPY_FILES += device/qcom/msmnile/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
-PRODUCT_COPY_FILES += device/qcom/msmnile/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml
-
-PRODUCT_COPY_FILES += device/qcom/msmnile/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
-
-PRODUCT_COPY_FILES += device/qcom/msmnile/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-
-endif #TARGET_ENABLE_QC_AV_ENHANCEMENTS
-
-PRODUCT_COPY_FILES += hardware/qcom/media/conf_files/msmnile/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml
-
 PRODUCT_PACKAGES += android.hardware.media.omx@1.0-impl
-
-# Codec2.0 system service and libs
-PRODUCT_PACKAGES += \
-    com.android.media.swcodec \
-    libsfplugin_ccodec \
-    libmedia_codecserviceregistrant \
-    libstagefright_ccodec \
-    vendor.qti.media.c2@1.0-service \
-    vendor.qti.media.c2@1.0-service.rc \
-    qcodec2_test
 
 # Audio configuration file
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msmnile/msmnile.mk
