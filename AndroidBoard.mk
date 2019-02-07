@@ -113,4 +113,4 @@ endif
 
 # Transient change to create odm.img for partition table update and flash
 # process update transition
-$(shell if [ ! -f $(PRODUCT_OUT)/odm.img ]; then mkdir -p $(PRODUCT_OUT); touch $(PRODUCT_OUT)/odm.img; fi)
+$(shell if [ ! -f $(PRODUCT_OUT)/odm.img ]; then mkdir -p $(PRODUCT_OUT); echo -n x > $(PRODUCT_OUT)/odm.img; fi)
