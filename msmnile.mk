@@ -169,6 +169,8 @@ PRODUCT_PACKAGES += android.hardware.media.omx@1.0-impl
 
 # Codec2.0 system service and libs
 PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec \
     libmedia_codecserviceregistrant \
     libstagefright_ccodec \
     vendor.qti.media.c2@1.0-service \
