@@ -144,8 +144,10 @@ ifneq ($(strip $(QCPATH)),)
 endif
 endif
 
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 #Vendor media profiles
 PRODUCT_COPY_FILES += device/qcom/msmnile/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+endif
 
 # Video codec configuration files
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
