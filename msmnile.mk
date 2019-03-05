@@ -147,6 +147,9 @@ endif
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 #Vendor media profiles
 PRODUCT_COPY_FILES += device/qcom/msmnile/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+#BT library
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bluetooth.library_name=libbluetooth_qti.so
 endif
 
 # Video codec configuration files
