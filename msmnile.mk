@@ -128,7 +128,6 @@ PRODUCT_PACKAGES += telephony-ext
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
 
 TARGET_DISABLE_DASH := true
-TARGET_DISABLE_QTI_VPP := false
 
 ifneq ($(TARGET_DISABLE_DASH), true)
     PRODUCT_BOOT_JARS += qcmediaplayer
