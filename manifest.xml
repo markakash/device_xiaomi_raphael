@@ -332,16 +332,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                <instance>imsradio1</instance>
            </interface>
     </hal>
-    <!-- dpm QMI hal service -->
-    <hal format="hidl">
-        <name>com.qualcomm.qti.dpm.api</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IdpmQmi</name>
-            <instance>dpmQmiService</instance>
-        </interface>
-    </hal>
     <!-- qcrilhook -->
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -779,16 +769,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IIWlan</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
-        </interface>
-    </hal>
-    <!-- Data Link Latency -->
-    <hal format="hidl">
-        <name>vendor.qti.hardware.data.latency</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ILinkLatency</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
