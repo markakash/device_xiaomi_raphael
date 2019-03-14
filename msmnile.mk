@@ -128,12 +128,6 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
 #endif
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-ifneq ($(strip $(QCPATH)),)
-    PRODUCT_BOOT_JARS += libprotobuf-java_mls
-endif
-endif
-
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 #BT library
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
