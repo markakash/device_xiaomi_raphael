@@ -33,6 +33,13 @@ TARGET_USES_AOSP := false
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
 
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
+  $(warning "Compiling with full value-added framework")
+else
+  $(warning "Compiling without full value-added framework - enabling GENERIC_ODM_IMAGE")
+  GENERIC_ODM_IMAGE := true
+endif
+
 ###########
 #QMAA flags starts
 ###########

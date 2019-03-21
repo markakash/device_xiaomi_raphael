@@ -216,7 +216,7 @@ include device/qcom/wlan/msmnile/BoardConfigWlan.mk
 endif
 
 ifeq ($(ENABLE_VENDOR_IMAGE), false)
-	$(error "Vendor Image is mandatory !!")
+  $(error "Vendor Image is mandatory !!")
 endif
 
 #Flag to enable System SDK Requirements.
