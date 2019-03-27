@@ -40,6 +40,15 @@ else
   GENERIC_ODM_IMAGE := true
 endif
 
+# Enable Codec2.0 HAL as default for pure AOSP variants.
+# WA till ODM properties start taking effect
+ifeq ($(GENERIC_ODM_IMAGE),true)
+  $(warning "Forcing codec2.0 for generic odm build variant")
+  PRODUCT_PROPERTY_OVERRIDES += debug.media.codec2=2
+  PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
+  PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=1000
+endif
+
 ###########
 #QMAA flags starts
 ###########
