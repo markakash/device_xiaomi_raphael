@@ -367,7 +367,7 @@ ro.crypto.allow_encrypt_override = true
 $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
 
 ifneq ($(GENERIC_ODM_IMAGE),true)
-    PRODUCT_COPY_FILE += $(LOCAL_PATH)/manifest-qva.xml:/$(TARGET_ODM_OUT_ETC)/vintf/manifest.xml
+    PRODUCT_COPY_FILES += device/qcom/msmnile/manifest-qva.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
 endif
 
 ###################################################################################
