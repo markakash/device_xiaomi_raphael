@@ -199,8 +199,7 @@ PRODUCT_PACKAGES += update_engine \
 
 PRODUCT_HOST_PACKAGES += \
     brillo_update_payload \
-    configstore_xmlparser \
-    fips.py
+    configstore_xmlparser
 
 #Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
