@@ -63,6 +63,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IWifiDisplaySessionAudioTrack</name>
             <instance>wifidisplaysessionaudiotrack</instance>
         </interface>
+        <interface>
+            <name>IWifiDisplaySessionImageTrack</name>
+            <instance>wifidisplaysessionimagetrack</instance>
+        </interface>
     </hal>
     <!-- MLS HAL Service -->
     <hal format="hidl">
