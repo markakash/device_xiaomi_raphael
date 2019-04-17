@@ -1,3 +1,30 @@
+#####Dynamic partition Handling
+####
+#### Turning this flag to TRUE will enable dynamic partition/super image creation.
+
+#ifneq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
+BOARD_DYNAMIC_PARTITION_ENABLE :=false
+#endif
+
+ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
+# Enable chain partition for system, to facilitate system-only OTA in Treble.
+BOARD_AVB_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_SYSTEM_ROLLBACK_INDEX := 0
+BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
+else
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_PACKAGES += fastbootd
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_dynamic.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+BOARD_AVB_VBMETA_SYSTEM := system
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
+endif
+
+#####Dynamic partition Handling
+
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
 
