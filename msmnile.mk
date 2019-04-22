@@ -25,9 +25,14 @@ endif
 
 #####Dynamic partition Handling
 
-# For QSSI builds, we skip building the system image. Instead we build the
-# "non-system" images (that we support).
+# For QSSI builds, we skip building the system image (when value adds are enabled).
+# Instead we build the "non-system" images (that we support).
+
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 PRODUCT_BUILD_SYSTEM_IMAGE := false
+else
+PRODUCT_BUILD_SYSTEM_IMAGE := true
+endif
 PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 PRODUCT_BUILD_VENDOR_IMAGE := true
 PRODUCT_BUILD_PRODUCT_IMAGE := false
