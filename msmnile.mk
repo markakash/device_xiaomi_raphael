@@ -2,9 +2,9 @@
 ####
 #### Turning this flag to TRUE will enable dynamic partition/super image creation.
 
-#ifneq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-BOARD_DYNAMIC_PARTITION_ENABLE ?=false
-#endif
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
+BOARD_DYNAMIC_PARTITION_ENABLE ?=true
+endif
 
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 # Enable chain partition for system, to facilitate system-only OTA in Treble.
