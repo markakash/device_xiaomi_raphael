@@ -936,11 +936,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
             <instance>software</instance>
         </interface>
-        <interface>
-            <name>IConfigurable</name>
-            <instance>default</instance>
-            <instance>software</instance>
-        </interface>
     </hal>
     <!-- BluetoothSar service-->
     <hal format="hidl">
