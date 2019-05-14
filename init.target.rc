@@ -160,7 +160,6 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
 on charger
-    start vendor.hvdcp_opti
     start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
@@ -251,11 +250,6 @@ service vendor.energy-awareness /vendor/bin/energy-awareness
     user system
     group system
     oneshot
-
-service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
-    class main
-    user root
-    group system wakelock
 
 service vendor.tlocd /vendor/bin/tloc_daemon
     class late_start
