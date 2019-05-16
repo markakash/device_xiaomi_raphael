@@ -55,9 +55,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/av \
     hardware/google/interfaces
 
-# privapp-permissions whitelisting
-PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
-
 TARGET_DEFINES_DALVIK_HEAP := true
 $(call inherit-product, device/qcom/qssi/common64.mk)
 
