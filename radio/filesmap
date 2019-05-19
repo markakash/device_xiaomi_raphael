@@ -47,6 +47,7 @@ qupv3fw.elf             /dev/block/bootdevice/by-name/qupfw
 storsec.mbn             /dev/block/bootdevice/by-name/storsec
 imagefv.elf             /dev/block/bootdevice/by-name/imagefv
 vbmeta.img              /dev/block/bootdevice/by-name/vbmeta
+vbmeta_system.img       /dev/block/bootdevice/by-name/vbmeta_system
 dtbo.img                /dev/block/bootdevice/by-name/dtbo
 multiimgoem.img         /dev/block/bootdevice/by-name/multiimgoem
 multiimgqti.img         /dev/block/bootdevice/by-name/multiimgqti
