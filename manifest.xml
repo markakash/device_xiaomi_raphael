@@ -838,14 +838,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IDevice</name>
             <instance>default</instance>
+            <instance>qti-default</instance>
             <instance>qti-dsp</instance>
             <instance>qti-gpu</instance>
             <instance>qti-hta</instance>
         </interface>
-        <fqname>@1.2::IDevice/default</fqname>
-        <fqname>@1.2::IDevice/qti-dsp</fqname>
-        <fqname>@1.2::IDevice/qti-gpu</fqname>
-        <fqname>@1.2::IDevice/qti-hta</fqname>
     </hal>
     <!-- SCVE Panorama hal services -->
     <hal format="hidl">
