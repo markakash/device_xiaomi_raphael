@@ -56,6 +56,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces
 
 TARGET_DEFINES_DALVIK_HEAP := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 $(call inherit-product, device/qcom/qssi/common64.mk)
 
 #Inherit all except heap growth limit from phone-xhdpi-2048-dalvik-heap.mk
@@ -169,8 +170,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy \
 
 PRODUCT_BOOT_JARS += tcmiface
-
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
 
 #ifneq ($(strip $(QCPATH)),)
 #    PRODUCT_BOOT_JARS += WfdCommon
