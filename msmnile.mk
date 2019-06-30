@@ -1,9 +1,17 @@
 #####Dynamic partition Handling
 ####
-#### Turning this flag to TRUE will enable dynamic partition/super image creation.
+#### Turning BOARD_DYNAMIC_PARTITION_ENABLE flag to TRUE will enable dynamic partition/super image creation.
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-BOARD_DYNAMIC_PARTITION_ENABLE ?=true
+  # By default this target is new-launch config, so set the default shipping level to 29 (if not set explictly earlier)
+  SHIPPING_API_LEVEL ?= 29
+
+  # Enable Dynamic partitions only for Q new launch devices.
+  ifeq ($(SHIPPING_API_LEVEL),29)
+    BOARD_DYNAMIC_PARTITION_ENABLE := true
+  else ifeq ($(SHIPPING_API_LEVEL),28)
+    BOARD_DYNAMIC_PARTITION_ENABLE := false
+  endif
 endif
 
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
