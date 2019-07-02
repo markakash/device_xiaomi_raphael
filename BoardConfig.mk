@@ -29,6 +29,12 @@ BOARD_EXT4_SHARE_DUP_BLOCKS := true
 endif
 ### Dynamic partition Handling
 
+ifeq ($(SHIPPING_API_LEVEL),29)
+BOARD_SYSTEMSDK_VERSIONS:=29
+else
+BOARD_SYSTEMSDK_VERSIONS:=28
+endif
+
 BUILD_BROKEN_ANDROIDMK_EXPORTS=true
 BUILD_BROKEN_DUP_COPY_HEADERS=true
 # TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
@@ -239,10 +245,6 @@ endif
 ifeq ($(ENABLE_VENDOR_IMAGE), false)
   $(error "Vendor Image is mandatory !!")
 endif
-
-#Flag to enable System SDK Requirements.
-#All vendor APK will be compiled against system_current API set.
-BOARD_SYSTEMSDK_VERSIONS:=28
 
 BUILD_BROKEN_DUP_RULES := true
 
