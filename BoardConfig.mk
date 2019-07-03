@@ -55,6 +55,10 @@ TARGET_NO_KERNEL := false
 USE_OPENGL_RENDERER := true
 BOARD_USE_LEGACY_UI := true
 
+# Set Header version for bootimage
+BOARD_BOOTIMG_HEADER_VERSION := 1
+BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
 # Full A/B partition update set
