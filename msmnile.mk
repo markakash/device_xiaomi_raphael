@@ -186,12 +186,6 @@ PRODUCT_BOOT_JARS += tcmiface
 #    PRODUCT_BOOT_JARS += WfdCommon
 #endif
 
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-#BT library
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bluetooth.library_name=libbluetooth_qti.so
-endif
-
 PRODUCT_PACKAGES += android.hardware.media.omx@1.0-impl
 
 # Camera configuration file. Shared by passthrough/binderized camera HAL
@@ -271,13 +265,8 @@ DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/msmnile/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
-
-#ANT+ stack
-PRODUCT_PACKAGES += \
-    AntHalService \
-    libantradio \
-    antradio_app \
-    libvolumelistener
+#audio related module
+PRODUCT_PACKAGES += libvolumelistener
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
@@ -299,10 +288,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
     android.hardware.contexthub@1.0-service
-
-# system prop for Bluetooth SOC type
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=cherokee
 
 #vendor prop to enable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \
