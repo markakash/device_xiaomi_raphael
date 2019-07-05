@@ -58,6 +58,11 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/av \
     hardware/google/interfaces
 
+# privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
+PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
+endif
+
 TARGET_DEFINES_DALVIK_HEAP := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 $(call inherit-product, device/qcom/qssi/common64.mk)
