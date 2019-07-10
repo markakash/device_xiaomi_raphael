@@ -3,6 +3,9 @@
 # Product-specific compile-time definitions.
 #
 
+#Generate DTBO image
+BOARD_KERNEL_SEPARATED_DTBO := true
+
 ### Dynamic partition Handling
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
@@ -19,6 +22,10 @@ BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := vendor odm
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06000000
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
+    ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)
+        # Enable DTBO for recovery image
+        BOARD_INCLUDE_RECOVERY_DTBO := true
+    endif
 endif
 ### Dynamic partition Handling
 
@@ -214,9 +221,6 @@ USE_SENSOR_HAL_VER := 2.0
 
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := true
-
-#Generate DTBO image
-BOARD_KERNEL_SEPARATED_DTBO := true
 
 #Enable INTERACTION_BOOST
 TARGET_USES_INTERACTION_BOOST := true
