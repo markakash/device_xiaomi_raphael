@@ -35,9 +35,6 @@ else
 BOARD_SYSTEMSDK_VERSIONS:=28
 endif
 
-# TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
-BUILD_BROKEN_ENG_DEBUG_TAGS := true
-
 TARGET_BOARD_PLATFORM := msmnile
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
 
@@ -257,9 +254,6 @@ BUILD_BROKEN_DUP_RULES := true
 #Enable VNDK Compliance
 BOARD_VNDK_VERSION:=current
 Q_BU_DISABLE_MODULE := true
-
-#Disable PHONY target checks for initial bringup
-BUILD_BROKEN_PHONY_TARGETS := true
 
 
 #################################################################################
