@@ -49,7 +49,7 @@ endif
 PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 PRODUCT_BUILD_VENDOR_IMAGE := true
 PRODUCT_BUILD_PRODUCT_IMAGE := false
-PRODUCT_BUILD_PRODUCT_SERVICES_IMAGE := false
+PRODUCT_BUILD_SYSTEM_EXT_IMAGE := false
 PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_BUILD_CACHE_IMAGE := false
 PRODUCT_BUILD_RAMDISK_IMAGE := true
@@ -252,12 +252,6 @@ PRODUCT_HOST_PACKAGES += \
 
 #Boot control HAL test app
 PRODUCT_PACKAGES_DEBUG += bootctl
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-  bootctrl.msmnile \
-  librecovery_updater_msm \
-  libz \
-  libcutils
 
 PRODUCT_PACKAGES += \
   update_engine_sideload
