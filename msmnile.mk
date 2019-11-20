@@ -38,6 +38,9 @@ endif
 
 #####Dynamic partition Handling
 
+# Default A/B configuration.
+ENABLE_AB ?= true
+
 # For QSSI builds, we skip building the system image (when value adds are enabled).
 # Instead we build the "non-system" images (that we support).
 
