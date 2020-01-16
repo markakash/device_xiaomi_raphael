@@ -2,18 +2,16 @@
 ####
 #### Turning BOARD_DYNAMIC_PARTITION_ENABLE flag to TRUE will enable dynamic partition/super image creation.
 
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-  # By default this target is new-launch config, so set the default shipping level to 29 (if not set explictly earlier)
-  SHIPPING_API_LEVEL ?= 29
+# By default this target is new-launch config, so set the default shipping level to 29 (if not set explictly earlier)
+SHIPPING_API_LEVEL ?= 29
 
-  # Enable Dynamic partitions only for Q new launch devices.
-  ifeq ($(SHIPPING_API_LEVEL),29)
-    BOARD_DYNAMIC_PARTITION_ENABLE := true
-    PRODUCT_SHIPPING_API_LEVEL := 29
-  else ifeq ($(SHIPPING_API_LEVEL),28)
-    BOARD_DYNAMIC_PARTITION_ENABLE := false
-    $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
-  endif
+# Enable Dynamic partitions only for Q new launch devices.
+ifeq ($(SHIPPING_API_LEVEL),29)
+  BOARD_DYNAMIC_PARTITION_ENABLE := true
+  PRODUCT_SHIPPING_API_LEVEL := 29
+else ifeq ($(SHIPPING_API_LEVEL),28)
+  BOARD_DYNAMIC_PARTITION_ENABLE := false
+  $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
 endif
 
 ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
@@ -44,11 +42,7 @@ ENABLE_AB ?= true
 # For QSSI builds, we skip building the system image (when value adds are enabled).
 # Instead we build the "non-system" images (that we support).
 
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 PRODUCT_BUILD_SYSTEM_IMAGE := false
-else
-PRODUCT_BUILD_SYSTEM_IMAGE := true
-endif
 PRODUCT_BUILD_SYSTEM_OTHER_IMAGE := false
 PRODUCT_BUILD_VENDOR_IMAGE := true
 PRODUCT_BUILD_PRODUCT_IMAGE := false
@@ -72,9 +66,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
-endif
 
 TARGET_DEFINES_DALVIK_HEAP := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
