@@ -98,15 +98,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
  <!--ANT/BT/FM-->
     <hal format="hidl">
-        <name>com.qualcomm.qti.ant</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAntHci</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>com.dsi.ant</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -140,15 +131,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0</version>
         <interface>
             <name>IBTConfigStore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.bluetooth_dun</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBluetoothDunServer</name>
             <instance>default</instance>
         </interface>
     </hal>
