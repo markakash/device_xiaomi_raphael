@@ -46,6 +46,13 @@ endif
 # Default A/B configuration.
 ENABLE_AB ?= true
 
+# Enable virtual-ab by default
+ENABLE_VIRTUAL_AB := true
+
+ifeq ($(ENABLE_VIRTUAL_AB), true)
+    $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+endif
+
 # For QSSI builds, we skip building the system image (when value adds are enabled).
 # Instead we build the "non-system" images (that we support).
 
@@ -244,9 +251,9 @@ PRODUCT_PACKAGES += fs_config_files
 PRODUCT_PACKAGES += update_engine \
     update_engine_client \
     update_verifier \
-    bootctrl.msmnile \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
 
 PRODUCT_HOST_PACKAGES += \
     brillo_update_payload \
