@@ -1,8 +1,10 @@
 on boot
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm
+    chown system system /sys/class/drm/card0-DSI-1/disp_param
     chown system system /sys/devices/virtual/touch/tp_dev/fod_status
 
     chmod 0644 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm
+    chmod 0644 /sys/class/drm/card0-DSI-1/disp_param
     chmod 0644 /sys/devices/virtual/touch/tp_dev/fod_status
 
 service fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.lucid.biometrics.fingerprint.inscreen@1.0-service.xiaomi_raphael

@@ -26,6 +26,10 @@
 #define PARAM_NIT_FOD 1
 #define PARAM_NIT_NONE 0
 
+#define DISPPARAM_PATH "/sys/class/drm/card0-DSI-1/disp_param"
+#define DISPPARAM_HBM_ON 0xF20000
+#define DISPPARAM_HBM_OFF 0xE0000
+
 #define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm"
 #define FOD_HBM_ON 1
 #define FOD_HBM_OFF 0
@@ -58,6 +62,18 @@ template <typename T>
 static void set(const std::string& path, const T& value) {
     std::ofstream file(path);
     file << value;
+}
+
+static void setHBM(const int state){
+    int cmd = state ? DISPPARAM_HBM_ON : DISPPARAM_HBM_OFF;
+    std::ifstream fodHBMNode(FOD_HBM_PATH);
+    std::ofstream dispparamNode(DISPPARAM_PATH);
+
+    if (fodHBMNode.good()) {
+        set(FOD_HBM_PATH, state);
+    } else {
+        dispparamNode << "0x" << std::hex << cmd;
+    }
 }
 
 } // anonymous namespace
@@ -101,7 +117,7 @@ Return<void> FingerprintInscreen::onPress() {
         set(DC_STATUS_PATH, DC_STATUS_OFF);
         this->shouldChangeDcStatus = true;
     }
-    set(FOD_HBM_PATH, FOD_HBM_ON);
+    setHBM(FOD_HBM_ON);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
     return Void();
 }
@@ -111,7 +127,7 @@ Return<void> FingerprintInscreen::onRelease() {
 	set(DC_STATUS_PATH, DC_STATUS_ON);
 	this->shouldChangeDcStatus = false;
     }
-    set(FOD_HBM_PATH, FOD_HBM_OFF);
+    setHBM(FOD_HBM_OFF);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
 }
