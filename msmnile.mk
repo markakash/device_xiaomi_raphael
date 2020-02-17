@@ -372,9 +372,9 @@ ro.crypto.volume.filenames_mode = "aes-256-cts" \
 ro.crypto.allow_encrypt_override = true
 
 ifneq ($(GENERIC_ODM_IMAGE),true)
-    PRODUCT_COPY_FILES += device/qcom/msmnile/manifest-qva.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
+    ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-qva.xml
 else
-    PRODUCT_COPY_FILES += device/qcom/msmnile/manifest-generic.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
+    ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-generic.xml
 endif
 ###################################################################################
 # This is the End of target.mk file.
