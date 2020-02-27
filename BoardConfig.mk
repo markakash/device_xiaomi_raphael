@@ -63,7 +63,6 @@ endif
 
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
