@@ -73,7 +73,7 @@ endif
 include $(BUILD_PREBUILT)
 endif
 
-include device/qcom/qssi/MergeConfig.mk
+include device/qcom/vendor-common/MergeConfig.mk
 
 #----------------------------------------------------------------------
 # Radio image

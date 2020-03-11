@@ -70,7 +70,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 
 TARGET_DEFINES_DALVIK_HEAP := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-$(call inherit-product, device/qcom/qssi/common64.mk)
+$(call inherit-product, device/qcom/vendor-common/common64.mk)
 
 #Inherit all except heap growth limit from phone-xhdpi-2048-dalvik-heap.mk
 PRODUCT_PROPERTY_OVERRIDES  += \
@@ -372,9 +372,9 @@ ro.crypto.volume.filenames_mode = "aes-256-cts" \
 ro.crypto.allow_encrypt_override = true
 
 ifneq ($(GENERIC_ODM_IMAGE),true)
-    PRODUCT_COPY_FILES += device/qcom/msmnile/manifest-qva.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
+    ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-qva.xml
 else
-    PRODUCT_COPY_FILES += device/qcom/msmnile/manifest-generic.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
+    ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-generic.xml
 endif
 ###################################################################################
 # This is the End of target.mk file.

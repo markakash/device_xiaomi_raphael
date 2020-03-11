@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
+<!-- Copyright (c) 2017-2020, The Linux Foundation. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -47,7 +47,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>5.0</version>
+        <version>6.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
@@ -56,7 +56,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
-        <version>5.0</version>
+        <version>6.0</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
@@ -214,15 +214,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IPower</name>
             <instance>default</instance>
        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.sensors</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ISensors</name>
-            <instance>default</instance>
-        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
@@ -784,19 +775,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>IContexthub</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <!-- Naural Network HAL -->
-    <hal format="hidl">
-        <name>android.hardware.neuralnetworks</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IDevice</name>
-            <instance>qti-default</instance>
-            <instance>qti-dsp</instance>
-            <instance>qti-gpu</instance>
-            <instance>qti-hta</instance>
         </interface>
     </hal>
     <!-- SCVE Panorama hal services -->
