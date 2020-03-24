@@ -33,6 +33,18 @@ vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_res.bin
 
+# ANT+ (system) - from LA.UM.8.1.r1-14300-sm8150.0
+product/lib/com.qualcomm.qti.ant@1.0.so|a6e5dc519d76a0d938701b8773df19cfa98596b4
+-lib/libantradio.so|8a804ec625b1fcdfd6dbca7508e7f716c703a8bd
+product/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
+-lib64/libantradio.so|1f72265e787b5abe2462033d06804838324421e8
+
+# ANT+ (vendor) - from LA.UM.8.1.r1-14300-sm8150.0
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|2c2769964955a031cd34056c4c7c39402d78dfb9
+vendor/lib/com.qualcomm.qti.ant@1.0.so|f06db3ccdcd6b184d26f4e4a3880e587e09f3a6b
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|203528c568c1c5ce33b35dcb9ee9eb7ecb1de206
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|181a8ab9b1d40705d3151821b53732c5566a2848
+
 # Audio
 vendor/lib/liba2dpoffload.so
 vendor/lib/libacdb-fts.so
