@@ -170,6 +170,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+# FlickerFree
+PRODUCT_PACKAGES += \
+    FlickerFree
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -225,6 +229,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.raphael.rc \
+    init.safailnet.rc \
     init.target.rc \
     init.panel_info.sh \
     ueventd.qcom.rc
