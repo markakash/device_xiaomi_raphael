@@ -54,6 +54,7 @@ public:
 
 private:
     bool mFodCircleVisible;
+    bool shouldChangeDcStatus;
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
 };
 

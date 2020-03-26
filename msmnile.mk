@@ -183,6 +183,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+# FlickerFree
+PRODUCT_PACKAGES += \
+    FlickerFree
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \

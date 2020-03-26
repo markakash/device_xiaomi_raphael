@@ -34,6 +34,10 @@
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF 0
 
+#define DC_STATUS_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable"
+#define DC_STATUS_ON 1
+#define DC_STATUS_OFF 0
+
 #define FOD_SENSOR_X 445
 #define FOD_SENSOR_Y 1931
 #define FOD_SENSOR_SIZE 190
@@ -92,12 +96,21 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+    this->shouldChangeDcStatus = false;
+    if(1 == get(DC_STATUS_PATH,  0)) {
+        set(DC_STATUS_PATH, DC_STATUS_OFF);
+        this->shouldChangeDcStatus = true;
+    }
     set(FOD_HBM_PATH, FOD_HBM_ON);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_FOD);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+    if(true == this->shouldChangeDcStatus) {
+	set(DC_STATUS_PATH, DC_STATUS_ON);
+	this->shouldChangeDcStatus = false;
+    }
     set(FOD_HBM_PATH, FOD_HBM_OFF);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
