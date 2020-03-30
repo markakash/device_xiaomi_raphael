@@ -78,24 +78,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>wifidisplaysessionimagetrack</instance>
         </interface>
     </hal>
-    <!-- MLS HAL Service -->
-    <hal format="hidl">
-        <name>vendor.qti.hardware.mlshal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMlsDap</name>
-            <instance>mlsdaphal</instance>
-        </interface>
-        <interface>
-            <name>IMlsVnc</name>
-            <instance>mlsvnchal</instance>
-        </interface>
-        <interface>
-            <name>IMlsIon</name>
-            <instance>mlsionhal</instance>
-        </interface>
-    </hal>
  <!--ANT/BT/FM-->
     <hal format="hidl">
         <name>com.dsi.ant</name>
