@@ -1,5 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
+# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+
 #----------------------------------------------------------------------
 # Compile (L)ittle (K)ernel bootloader and the nandwrite utility
 #----------------------------------------------------------------------
@@ -57,7 +60,11 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.qcom
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 LOCAL_SRC_FILES    := fstab_dynamic_partition.qcom
+else
+LOCAL_SRC_FILES    := fstab_dynamic_partition_noSysext.qcom
+endif
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 else
