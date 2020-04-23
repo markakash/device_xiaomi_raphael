@@ -1,36 +1,38 @@
-# ADSP
-vendor/bin/adsprpcd
-vendor/etc/init/vendor.qti.adsprpc-service.rc
-vendor/lib/libadsprpc.so
-vendor/lib/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
+# ADSP - from LA.UM.8.1.r1-14500-sm8150.0
+vendor/bin/adsprpcd|5b803e679ddbce4e59c2a67433ffefa6396d61f3
+vendor/etc/init/vendor.qti.adsprpc-service.rc|1dc3b27f92a76fda2f69b3cb00cf1a13d188f830
+vendor/lib/libadsprpc.so|98608b7298107d15a07c549c56d28b091af3c08b
+vendor/lib/libadsp_default_listener.so|9d368444c806d344f4ea78ad4ec2b499d67f53d6
+vendor/lib64/libadsprpc.so|191027d98939e3e1c23875cce09da0787fc11045
+vendor/lib64/libadsp_default_listener.so|ec9a452e318db1ddc5d826dd7cc2b14dd5fb2a14
+vendor/lib64/libmdsprpc.so|cceac01229c28a6d75afa7b835ce87d4fba41014
+vendor/lib64/libsdsprpc.so|3947fed04d7f5c084843d720b81cce0e25fb6178
+
+# ADSP-Modules - from LA.UM.8.1.r1-14500-sm8150.0
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|1cdac354c585c0d236d77b0888ebd5894b333326
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so|e4a35174a93264b38fe210a3f99e5fb7be8dc39e
+vendor/lib/rfsa/adsp/libdspCV_skel.so|63fc368b17e1b112c8824cd245c3a4dec17d13e4
+vendor/lib/rfsa/adsp/libfastcvadsp.so|cb6849db333972f3891973d052106dfc95f88c90
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|096236d79d282a872a3226fea3a0dafd67184767
+vendor/lib/rfsa/adsp/libdsp_streamer_skel.so|9cbf4d3c72b3e989c07e8b8f37c03f3b78e91f3d
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|c7ef0ae4234df8f29bf7eca0e82d5e499c23cfbc
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
+vendor/lib/rfsa/adsp/libVC1Dec.so|b95d4b6cf40d465a405ff27ceecd49a839ab74f7
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|b10140f450c053e3b88414c85454225aa9456473
 
 # ADSP-Modules
-vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 vendor/lib/rfsa/adsp/dirac_resource.dar
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
+vendor/lib/rfsa/adsp/libSuperSensor_skel.so
 vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
-vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libdirac-capiv2.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
-vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libproxy_skel.so
-vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/libSuperSensor_skel.so
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res.bin
 
 # ANT+ (system) - from LA.UM.8.1.r1-14300-sm8150.0
@@ -436,11 +438,11 @@ vendor/lib64/libdisp-aba.so|a7f8975e5a323100bb9e5feb14085c0c4479ce96
 vendor/lib64/libdisplayqos.so|8e5f13a5b7ea0efa8db2902c8719380d710bc857
 vendor/lib64/libhdr_tm.so|a04a0abf52d940ddb4916e74d48cc2b16526e355
 vendor/lib64/libqseed3.so|3fb480721b26a2df0a2a96359814ef37a5da9148
-vendor/lib64/libsdedrm.so|1a6d6ac050678dbc2b7d724ff7c642e4946b573b
-vendor/lib64/libsdm-color.so|fc5d712de30c255b187bd2c9e48849cce9a2e573
-vendor/lib64/libsdm-colormgr-algo.so|5f497ba10168722455b0a3b80e7e3dca85e00c8f
-vendor/lib64/libsdm-diag.so|1044fd68ba610d08d7a02765a95563cc90dd5a54
-vendor/lib64/libsdm-disp-vndapis.so|6f4fd3a5a253ec4dff787de1ad6e67d07e921d94
+vendor/lib64/libsdedrm.so|21ef252babf0bba0d79a22fa3c67a7ec15bba5b4
+vendor/lib64/libsdm-color.so|9d301706c16ce768a3fe72e9990f2d8799aeb9f6
+vendor/lib64/libsdm-colormgr-algo.so|98a55014ebce7dd77319745c118af8368dec5e27
+vendor/lib64/libsdm-diag.so|f080993703d425a337faaa5d2cc3c05119db6ac1
+vendor/lib64/libsdm-disp-vndapis.so|d928e16612715d7a416d8c3b7920311bd9a93fed
 vendor/lib64/libsdmextension.so|fc9994028e62ed31223b9a494c4bf4a469b855a9
 vendor/lib64/libtinyxml.so|6b469580f781995a2e78fe1b5c19930040a8798e
 vendor/lib64/libtinyxml2_1.so|92adc9b612766cda6fa50f4c36d046b1a6da0816
@@ -734,12 +736,12 @@ vendor/lib64/libperfgluelayer.so|4c95e08abc1cef5b39db06579d8f9faceb8f23d4
 vendor/lib64/libqti-perfd-client.so|0c2b82b5e5df6e0efb03ace4a259eb63487dd2b6
 vendor/lib64/libqti-perfd.so|7a6c75d2ec8ba7ed6bf17ef048c3c79a1a2daf53
 vendor/lib64/libqti-util.so|45a80be449435d277f09cc59e4a315fa86072c41
-vendor/lib64/libqti-utils.so
-vendor/lib64/libmeters-ns.so
-vendor/lib64/libgameoptfeature.so
-vendor/lib64/libadaptlaunch.so
-vendor/lib/libqti-utils.so
-vendor/lib/libperfconfig.so
+vendor/lib64/libqti-utils.so|3726d65486928bc014e657960dc023d920524922
+vendor/lib64/libmeters-ns.so|73f78b3461a4cbee6419721149dd95fec9029f8b
+vendor/lib64/libgameoptfeature.so|b82be985421dd21bb25ed217f762e3955db16765
+vendor/lib64/libadaptlaunch.so|3d0d481af1112df5a5cc5eff886fad9d5d334c58
+vendor/lib/libqti-utils.so|81d3d40097615baad8ff77a6ba3e6ec0706b4d71
+vendor/lib/libperfconfig.so|9294c9f42edcb4e5c70ee7e13c4e301513a6d6dd
 
 # Peripheral
 vendor/bin/pm-proxy
