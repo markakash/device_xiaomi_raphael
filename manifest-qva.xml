@@ -78,6 +78,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>wifidisplaysessionimagetrack</instance>
         </interface>
     </hal>
+    <!-- WFD HDCP DRM -->
+    <hal format="hidl">
+        <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::ICryptoFactory/wfdhdcp</fqname>
+        <fqname>@1.1::IDrmFactory/wfdhdcp</fqname>
+    </hal>
  <!--ANT/BT/FM-->
     <hal format="hidl">
         <name>com.dsi.ant</name>

@@ -519,12 +519,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IDrmFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.2::ICryptoFactory/clearkey</fqname>
-        <fqname>@1.2::IDrmFactory/clearkey</fqname>
-        <fqname>@1.2::ICryptoFactory/widevine</fqname>
-        <fqname>@1.2::IDrmFactory/widevine</fqname>
-        <fqname>@1.1::ICryptoFactory/wfdhdcp</fqname>
-        <fqname>@1.1::IDrmFactory/wfdhdcp</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
@@ -757,16 +751,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- qdutils service  -->
-    <hal format="hidl">
-        <name>vendor.qti.hardware.qdutils_disp</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IQdutilsDisp</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- Context Hub HAL Service -->
     <hal format="hidl">
         <name>android.hardware.contexthub</name>
@@ -777,7 +761,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- SCVE Panorama hal services -->
+    <!-- SCVE Panorama hal services
     <hal format="hidl">
         <name>vendor.qti.hardware.scve.panorama</name>
         <transport>hwbinder</transport>
@@ -799,7 +783,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IObjectTracker</name>
             <instance>objectTracker</instance>
         </interface>
-    </hal>
+    </hal> -->
     <!-- CapabilityConfigStore HAL Service  -->
     <hal format="hidl">
         <name>vendor.qti.hardware.capabilityconfigstore</name>
@@ -819,7 +803,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- CVP hal services -->
+    <!-- CVP hal services
     <hal format="hidl">
         <name>vendor.qti.hardware.cvp</name>
         <transport>hwbinder</transport>
@@ -828,7 +812,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ICvp</name>
             <instance>cvphalservice</instance>
         </interface>
-    </hal>
+    </hal> -->
     <!-- Thermal HAL Service -->
     <hal format="hidl">
         <name>android.hardware.thermal</name>
@@ -859,6 +843,20 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Trusted UI HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.trustedui</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITrustedUI</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ITrustedInput</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <!-- WifiStats HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.wifilearner</name>
@@ -877,6 +875,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>ICryptfsHw</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- QCC HAL Service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qccvndhal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQccvndhal</name>
+            <instance>qccvndhal</instance>
         </interface>
     </hal>
 </manifest>

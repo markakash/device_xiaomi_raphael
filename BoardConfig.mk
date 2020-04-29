@@ -3,6 +3,9 @@
 # Product-specific compile-time definitions.
 #
 
+# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
 
@@ -102,7 +105,11 @@ ifneq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 TARGET_RECOVERY_FSTAB := device/qcom/msmnile/recovery_vendor_variant.fstab
 
 else
+ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 TARGET_RECOVERY_FSTAB := device/qcom/msmnile/recovery_dynamic_partition.fstab
+else
+TARGET_RECOVERY_FSTAB := device/qcom/msmnile/recovery_dynamic_partition_noSysext.fstab
+endif
 endif
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
