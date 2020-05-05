@@ -279,4 +279,4 @@ Q_BU_DISABLE_MODULE := true
 -include vendor/qcom/defs/board-defs/vendor/*.mk
 #################################################################################
 
-include device/qcom/sepolicy/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
