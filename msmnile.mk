@@ -343,6 +343,8 @@ endif
 #Enable vndk-sp Libraries
 PRODUCT_PACKAGES += vndk_package
 
+PRODUCT_PACKAGES += init.qti.dcvs.sh
+
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE:=true
 
 #----------------------------------------------------------------------
