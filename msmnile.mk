@@ -3,7 +3,7 @@
 #### Turning BOARD_DYNAMIC_PARTITION_ENABLE flag to TRUE will enable dynamic partition/super image creation.
 
 # Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
-SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE = true
 
 # By default this target is new-launch config, so set the default shipping level to 29 (if not set explictly earlier)
 SHIPPING_API_LEVEL ?= 29
