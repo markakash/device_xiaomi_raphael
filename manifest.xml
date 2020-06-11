@@ -407,6 +407,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          <instance>com.qualcomm.qti.uceservice</instance>
        </interface>
    </hal>
+   <!-- IMS CM Service -->
+   <hal format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+         <version>2.2</version>
+         <interface>
+             <name>IImsCmService</name>
+             <instance>qti.ims.connectionmanagerservice</instance>
+         </interface>
+    </hal>
    <!-- IMS callinfo Service -->
    <hal format="hidl">
        <name>vendor.qti.ims.callinfo</name>
