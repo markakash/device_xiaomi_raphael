@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 # Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
-SYSTEMEXT_SEPARATE_PARTITION_ENABLE ?= false
+SYSTEMEXT_SEPARATE_PARTITION_ENABLE = true
 
 #----------------------------------------------------------------------
 # Compile (L)ittle (K)ernel bootloader and the nandwrite utility
@@ -54,6 +54,15 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.qti.dcvs.sh
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := $(LOCAL_MODULE)
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
+include $(BUILD_PREBUILT)
+
 
 ifeq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
 include $(CLEAR_VARS)
