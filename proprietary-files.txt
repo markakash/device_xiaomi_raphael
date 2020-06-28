@@ -107,12 +107,12 @@ vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 product/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 product/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 
-# CDSP - from LA.UM.8.1.r1-14500-sm8150.0
+# CDSP - from LA.UM.8.1.r1-15100-sm8150.0
 vendor/bin/cdsprpcd|6fb2700151a6e6dd57a5d9a388cf3a95d3e8262b
-vendor/lib/libcdsprpc.so|30c8ee6b50b9872f82e2abc43df8c8347876a533
-vendor/lib/libcdsp_default_listener.so|a92281e3c69e4498c25daa103cbffd129ac7fa3d
-vendor/lib64/libcdsprpc.so|e2d42c5179838b2da8e9575c72c4aafee43b50fd
-vendor/lib64/libcdsp_default_listener.so|886ba3921f81439cb1b4e520ad622e1089291fa7
+vendor/lib/libcdsprpc.so|5cdf4019ee1ab6a5b38de9dc3034465d65185603
+vendor/lib/libcdsp_default_listener.so|5c54c6f6aadda190eb39353159fa5a10183142f1
+vendor/lib64/libcdsprpc.so|53628b8da7b2fc3453723913bd89b2d83e760d71
+vendor/lib64/libcdsp_default_listener.so|33260b098ddde2d0e6cf44b11f12e4c16264fda5
 
 # CNE
 -vendor/app/CneApp/CneApp.apk
