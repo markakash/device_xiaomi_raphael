@@ -278,7 +278,6 @@ PRODUCT_PACKAGES += libvolumelistener
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service \
     android.hardware.broadcastradio@1.0-impl
 
 # MSM IRQ Balancer configuration file
@@ -363,6 +362,10 @@ ifneq ($(GENERIC_ODM_IMAGE),true)
 else
     ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-generic.xml
 endif
+
+#Enable Light AIDL HAL
+PRODUCT_PACKAGES += android.hardware.lights-service.qti
+
 ###################################################################################
 # This is the End of target.mk file.
 # Now, Pickup other split product.mk files:
