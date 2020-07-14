@@ -16,12 +16,12 @@
 $(call inherit-product, device/xiaomi/raphael/msmnile.mk)
 
 # Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/404/configs/common.mk)
+$(call inherit-product, vendor/bliss/configs/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := p404_raphael
+PRODUCT_NAME := bliss_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
