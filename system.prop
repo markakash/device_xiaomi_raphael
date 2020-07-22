@@ -36,6 +36,9 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
 debug.cpurend.vsync=false
 
+# Incremental FS
+ro.incremental.enable=1
+
 # Set lmkd options
 ro.config.low_ram = false
 
