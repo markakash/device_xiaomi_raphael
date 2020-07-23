@@ -13,4 +13,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_raphael.mk
+    $(LOCAL_DIR)/aim_raphael.mk
