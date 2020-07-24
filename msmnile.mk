@@ -113,9 +113,7 @@ ifeq ($(GENERIC_ODM_IMAGE),true)
   PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
   PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=1000
 else
-  $(warning "Enabling codec2.0 SW only for non-generic odm build variant")
-  #Rank OMX SW codecs lower than OMX HW codecs
-  PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank.sw-audio=1
+  $(warning "Enabling codec2.0 non-audio SW only for non-generic odm build variant")
   PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=0
 endif
 
