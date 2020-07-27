@@ -356,7 +356,8 @@ TARGET_USES_MKE2FS := true
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.crypto.volume.filenames_mode = "aes-256-cts" \
-ro.crypto.allow_encrypt_override = true
+ro.crypto.allow_encrypt_override = true \
+ro.crypto.set_dun = true
 
 ifneq ($(GENERIC_ODM_IMAGE),true)
     ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-qva.xml
