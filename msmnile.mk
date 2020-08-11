@@ -3,12 +3,12 @@
 #### Turning BOARD_DYNAMIC_PARTITION_ENABLE flag to TRUE will enable dynamic partition/super image creation.
 
 # By default this target is new-launch config, so set the default shipping level to 29 (if not set explictly earlier)
-SHIPPING_API_LEVEL ?= 29
+SHIPPING_API_LEVEL := 30
 
 # Enable Dynamic partitions only for Q new launch devices.
-ifeq ($(SHIPPING_API_LEVEL),29)
+ifeq (true,$(call math_gt_or_eq,$(SHIPPING_API_LEVEL),29))
   BOARD_DYNAMIC_PARTITION_ENABLE := true
-  PRODUCT_SHIPPING_API_LEVEL := 29
+  PRODUCT_SHIPPING_API_LEVEL := $(SHIPPING_API_LEVEL)
 else ifeq ($(SHIPPING_API_LEVEL),28)
   BOARD_DYNAMIC_PARTITION_ENABLE := false
   $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
