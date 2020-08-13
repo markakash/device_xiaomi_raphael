@@ -2,9 +2,6 @@
 ####
 #### Turning BOARD_DYNAMIC_PARTITION_ENABLE flag to TRUE will enable dynamic partition/super image creation.
 
-# Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
-SYSTEMEXT_SEPARATE_PARTITION_ENABLE = true
-
 # By default this target is new-launch config, so set the default shipping level to 29 (if not set explictly earlier)
 SHIPPING_API_LEVEL ?= 29
 
@@ -28,11 +25,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += fastbootd
 # Add default implementation of fastboot HAL.
 PRODUCT_PACKAGES += android.hardware.fastboot@1.0-impl-mock
-ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_dynamic_partition.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_dynamic_partition_noSysext.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-endif
 BOARD_AVB_VBMETA_SYSTEM := system
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
@@ -120,9 +113,7 @@ ifeq ($(GENERIC_ODM_IMAGE),true)
   PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
   PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=1000
 else
-  $(warning "Enabling codec2.0 SW only for non-generic odm build variant")
-  #Rank OMX SW codecs lower than OMX HW codecs
-  PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank.sw-audio=1
+  $(warning "Enabling codec2.0 non-audio SW only for non-generic odm build variant")
   PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=0
 endif
 
@@ -287,7 +278,6 @@ PRODUCT_PACKAGES += libvolumelistener
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service \
     android.hardware.broadcastradio@1.0-impl
 
 # MSM IRQ Balancer configuration file
@@ -365,13 +355,21 @@ TARGET_USES_MKE2FS := true
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.crypto.volume.filenames_mode = "aes-256-cts" \
-ro.crypto.allow_encrypt_override = true
+ro.crypto.allow_encrypt_override = true \
+ro.crypto.set_dun = true
+
+# Enable incremental FS feature
+PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
 
 ifneq ($(GENERIC_ODM_IMAGE),true)
     ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-qva.xml
 else
     ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-generic.xml
 endif
+
+#Enable Light AIDL HAL
+PRODUCT_PACKAGES += android.hardware.lights-service.qti
+
 ###################################################################################
 # This is the End of target.mk file.
 # Now, Pickup other split product.mk files:
