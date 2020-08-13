@@ -34,7 +34,7 @@ system_ext                                 /system_ext     ext4    ro,barrier=1,
 product                                    /product        ext4    ro,barrier=1,discard                                            wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
 vendor                                     /vendor         ext4    ro,barrier=1,discard                                            wait,slotselect,avb,logical,first_stage_mount
 odm                                        /odm            ext4    ro,barrier=1,discard                                            wait,slotselect,avb,logical,first_stage_mount
-/dev/block/bootdevice/by-name/metadata     /metadata       ext4    noatime,nosuid,nodev,discard                                    wait,formattable,wrappedkey
+/dev/block/bootdevice/by-name/metadata     /metadata       ext4    noatime,nosuid,nodev,discard                                    wait,check,formattable,wrappedkey
 /dev/block/bootdevice/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check,encryptable=footer
 /dev/block/mmcblk0p1                       /sdcard         vfat    nosuid,nodev                                                    wait
 /dev/block/bootdevice/by-name/boot         /boot           emmc    defaults                                                        defaults
