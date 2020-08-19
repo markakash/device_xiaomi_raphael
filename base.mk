@@ -1111,6 +1111,11 @@ PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version
 endif
 endif
 
+ifneq ($(strip $(TARGET_BUILD_VARIANT)),user)
+PRODUCT_COPY_FILES += \
+    device/qcom/common/rootdir/etc/init.qcom.testscripts.sh:$(TARGET_COPY_OUT_PRODUCT)/etc/init.qcom.testscripts.sh
+endif
+
 ifneq ($(strip $(TARGET_USES_RRO)),true)
 # enable overlays to use our version of
 # source/resources etc.
