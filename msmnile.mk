@@ -355,7 +355,6 @@ TARGET_USES_MKE2FS := true
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.crypto.volume.filenames_mode = "aes-256-cts" \
-ro.crypto.allow_encrypt_override = true \
 ro.crypto.set_dun = true
 
 # Enable incremental FS feature
