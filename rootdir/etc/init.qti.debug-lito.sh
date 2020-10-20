@@ -304,6 +304,28 @@ config_lito_dcc_gemnoc()
     echo 0x969813c > $DCC_PATH/config
     #GemNOC for lito end
 }
+
+config_lito_dcc_gpu()
+{
+    #GCC
+    echo 0x171004 > $DCC_PATH/config
+    echo 0x171154 > $DCC_PATH/config
+    echo 0x17100C > $DCC_PATH/config
+    echo 0x171018 > $DCC_PATH/config
+
+    #GPUCC
+    echo 0x3D9106C > $DCC_PATH/config
+    echo 0x3D9100C > $DCC_PATH/config
+    echo 0x3D91010 > $DCC_PATH/config
+    echo 0x3D91014 > $DCC_PATH/config
+    echo 0x3D91070 > $DCC_PATH/config
+    echo 0x3D91074 > $DCC_PATH/config
+    echo 0x3D91098 > $DCC_PATH/config
+    echo 0x3D91004 > $DCC_PATH/config
+    echo 0x3D9109C > $DCC_PATH/config
+    echo 0x3D91078 > $DCC_PATH/config
+    echo 0x3D91054 > $DCC_PATH/config
+}
 config_lito_dcc_lpm()
 {
     #PCU Register
@@ -2823,6 +2845,7 @@ enable_lito_dcc_config()
     config_lito_dcc_osm
     config_lito_dcc_gemnoc
     config_lito_dcc_noc
+    config_lito_dcc_gpu
     config_lito_dcc_gcc
     config_lito_dcc_pimem
     config_lito_dcc_ddr
