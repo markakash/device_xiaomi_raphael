@@ -892,12 +892,12 @@ else
             VisualizationWallpapers
 
     DELAUN := Launcher3
-endif
 
-#servicetracker HAL
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2-impl \
-    vendor.qti.hardware.servicetracker@1.2-service
+    #servicetracker HAL
+    PRODUCT_PACKAGES += \
+            vendor.qti.hardware.servicetracker@1.2-impl \
+            vendor.qti.hardware.servicetracker@1.2-service
+endif
 
 PRODUCT_PACKAGES += $(ALSA_HARDWARE)
 PRODUCT_PACKAGES += $(ALSA_UCM)
