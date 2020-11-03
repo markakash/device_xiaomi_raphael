@@ -1213,7 +1213,6 @@ PRODUCT_PACKAGES_DEBUG += \
 
 PRODUCT_PACKAGES += liboemaids_system
 PRODUCT_PACKAGES += liboemaids_vendor
-PRODUCT_PACKAGES += android.hardware.health@2.0-service
 
 # framework detect libs
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
