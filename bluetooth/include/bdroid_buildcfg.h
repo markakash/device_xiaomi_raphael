@@ -76,3 +76,4 @@ static inline const char *BtmGetDefaultName()
 #define AVDT_NUM_SEPS 35
 
 #endif
+

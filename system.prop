@@ -1,3 +1,7 @@
+# ADB
+ro.secure=0
+ro.adb.secure=0
+
 # Bluetooth
 persist.bt.enableAptXHD=true
 persist.service.btui.use_aptx=1
