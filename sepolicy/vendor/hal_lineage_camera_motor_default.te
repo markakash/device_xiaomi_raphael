@@ -1,3 +1,9 @@
+type hal_lineage_camera_motor_default, domain;
+hal_server_domain(hal_lineage_camera_motor_default, hal_lineage_camera_motor)
+
+type hal_lineage_camera_motor_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_lineage_camera_motor_default)
+
 type hal_motor_hwservice_xiaomi, hwservice_manager_type;
 type akm09970_device, dev_type, mlstrustedobject;
 type drv8846_device, dev_type, mlstrustedobject;

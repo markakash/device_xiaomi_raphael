@@ -1,1 +1,2 @@
+hal_client_domain(system_server, hal_lineage_fod)
 get_prop(system_server, vendor_persist_camera_prop)
