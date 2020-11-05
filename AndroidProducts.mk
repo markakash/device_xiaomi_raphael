@@ -1,4 +1,4 @@
-# Copyright (C) 2020 YAAP
+# Copyright (C) 2020 Project 404
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_raphael.mk
+    $(LOCAL_DIR)/p404_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_raphael-user \
-    yaap_raphael-userdebug \
-    yaap_raphael-eng
+    p404_raphael-user \
+    p404_raphael-userdebug \
+    p404_raphael-eng
