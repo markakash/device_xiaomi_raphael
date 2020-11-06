@@ -656,11 +656,11 @@ vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
 vendor/lib64/libhexagon_nn_stub.so
 
-# Pasrmanager
-vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service
-vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc
-vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
+# Pasrmanager - from LA.UM.9.12.r1-08300-SMxx50
+vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service|6c79aba1b3cfab2c9330d7cc308046abb4bd6de4
+vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc|b34c1b9179c89cd47adce145bae9a609e5141bc0
+vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|1d78782e980519bdedf8e7bcfe73edcc85142fd6
+vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|0fea4e107af19559138f6f4d73ad6961cfeae6c3
 
 # Perf - from LA.UM.9.12.r1-08300-SMxx50
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|17c4f5eff212f62dd53ad953927d3d0d509f5f27
