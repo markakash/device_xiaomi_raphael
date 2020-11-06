@@ -1,3 +1,5 @@
 hal_attribute_lineage(lineage_camera_motor)
 hal_attribute_lineage(lineage_fod)
 hal_attribute(mlipay)
+attribute hal_perf_server;
+attribute hal_perf;
