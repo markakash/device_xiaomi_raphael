@@ -388,7 +388,8 @@ PRODUCT_COPY_FILES += \
 # QTI Common
 TARGET_COMMON_QTI_COMPONENTS := \
     bt \
-    perf
+    perf \
+    wfd
 
 # RCS
 PRODUCT_PACKAGES += \
