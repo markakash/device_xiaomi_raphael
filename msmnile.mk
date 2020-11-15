@@ -510,12 +510,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
-    libnl \
     libqdMetaData \
     libqdMetaData.system
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
