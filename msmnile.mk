@@ -145,29 +145,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor
 
 # Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-impl \
-    android.hardware.graphics.composer@2.4-service \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    vendor.qti.hardware.display.allocator-service
-
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
-    android.hardware.graphics.mapper@4.0-impl-qti-display
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
-
-PRODUCT_PACKAGES += \
-    vendor.display.config@2.0.vendor
-
-PRODUCT_PACKAGES += \
-    gralloc.msmnile \
-    hwcomposer.msmnile \
-    memtrack.msmnile
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
@@ -386,8 +363,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # QTI Common
+TARGET_BOARD_PLATFORM := msmnile
 TARGET_COMMON_QTI_COMPONENTS := \
     bt \
+    display \
     perf \
     wfd
 

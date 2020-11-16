@@ -118,17 +118,6 @@ persist.vendor.data.mode=concurrent
 persist.vendor.data.iwlan.enable=true
 	
 # Display
-vendor.display.comp_mask=0
-vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
-vendor.display.disable_decimation=1
-vendor.display.disable_excl_rect=0
-vendor.display.disable_hw_recovery_dump=1
-vendor.display.disable_inline_rotator=1
-vendor.display.disable_scaler=0
-vendor.display.disable_ui_3d_tonemap=1
-vendor.display.enable_default_color_mode=1
-vendor.display.enable_null_display=0
-vendor.display.enable_optimize_refresh=1
 debug.hwui.renderer=skiavk
 	
 # FRP
@@ -141,15 +130,11 @@ ro.vendor.qti.va_odm.support=1
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
-debug.egl.hw=0
-debug.mdpcomp.logs=0
 debug.sf.enable_hwc_vds=1
-debug.sf.hw=0
 debug.sf.latch_unsignaled=1
 ro.hardware.egl=adreno
 ro.opengles.version=196610
 ro.hardware.vulkan=adreno
-vendor.gralloc.disable_ubwc=0
 	
 # IMS
 persist.dbg.volte_avail_ovr=1
