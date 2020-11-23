@@ -144,6 +144,7 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor \
+    libavservices_minijail_vendor
 
 # Display
 PRODUCT_COPY_FILES += \
