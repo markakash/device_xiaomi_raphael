@@ -22,4 +22,13 @@
     <!-- Shows the required view for in-display fingerprint -->
     <bool name="config_needCustomFODView">true</bool>
 
+    <!-- Defines the location of the fingerprint sensor on the device
+         0 = back
+         1 = front
+         2 = left side
+         3 = right side
+         4 = FOD (front)
+    -->
+    <integer name="config_fingerprintSensorLocation">4</integer>
+
 </resources>
