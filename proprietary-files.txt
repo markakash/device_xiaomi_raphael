@@ -670,10 +670,10 @@ vendor/lib/libOmxSwVdec.so|6a6be9a282c0101134de7685c96e103ad51c17cb
 vendor/lib/libOmxSwVencMpeg4.so|9daf4c33c65fc8cc2ae73bdb5bd080001ad89e07
 vendor/lib/libstagefrighthw.so|1d034b00a66804b1808ee039ef8940db5eccf4e8
 
-# Neural-networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
-vendor/lib64/libhexagon_nn_stub.so
+# Neural-networks - from LA.UM.9.1.r1-07300-SMxxx0.0
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|0a86349d0b595d69482215d4ed33f667f9b98b97
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
+vendor/lib64/libhexagon_nn_stub.so|a3676113882842116279fe902af00e630ec1778c
 
 # Pasrmanager - from LA.UM.9.12.r1-08300-SMxx50
 vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service|6c79aba1b3cfab2c9330d7cc308046abb4bd6de4
