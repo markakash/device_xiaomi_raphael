@@ -675,11 +675,12 @@ vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|0a86349d0b595d6948
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
 vendor/lib64/libhexagon_nn_stub.so|a3676113882842116279fe902af00e630ec1778c
 
-# Pasrmanager - from LA.UM.9.12.r1-08300-SMxx50
-vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service|6c79aba1b3cfab2c9330d7cc308046abb4bd6de4
+# Pasrmanager - from LA.UM.9.1.r1-07300-SMxxx0
+-vendor/app/pasrservice/pasrservice.apk|6d4e8bab2426b03231531ec09bce922601b8e8e6
+vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service|fd77dd9d01e14486b49d1f926607d3e9b15d9b8a
 vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc|b34c1b9179c89cd47adce145bae9a609e5141bc0
-vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|1d78782e980519bdedf8e7bcfe73edcc85142fd6
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|0fea4e107af19559138f6f4d73ad6961cfeae6c3
+vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|4be4deb43cab58ef19d71ae3f5633f53543a30dd
+vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|e5affcf769b56e137e55f9fd40a2937c4629cddb
 
 # Perf - from LA.UM.9.11.r1-02100-NICOBAR.0
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|d7d6275ac24fe256d7659ae04d543c9fd3cb18b1
@@ -1034,7 +1035,6 @@ vendor/bin/cnss-daemon
 vendor/bin/nv_mac
 
 # Misc
--vendor/app/pasrservice/pasrservice.apk
 vendor/bin/ipacm-diag
 vendor/bin/sscrpcd
 vendor/bin/vppservice
