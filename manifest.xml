@@ -678,6 +678,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ITrustedInput</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.1::ITrustedInput/default</fqname>
+        <fqname>@1.2::ITrustedUI/default</fqname>
     </hal>
     <!-- WifiStats HAL service -->
     <hal format="hidl">
