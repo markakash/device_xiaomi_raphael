@@ -24,9 +24,19 @@ property Name is called. -->
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" />
+                <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true"/>
 
                 <!--System Properties -->
+                <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
+                <Prop Name="ro.lmk.enhance_batch_kill" Value="false" />
+                <Prop Name="ro.lmk.enable_watermark_check" Value="true" />
+                <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
+                <Prop Name="ro.lmk.use_new_strategy_dup" Value="true" />
+                <Prop Name="ro.lmk.super_critical" Value="606" />
+                <Prop Name="ro.lmk.direct_reclaim_pressure" Value="45" />
+                <Prop Name="ro.lmk.reclaim_scan_threshold" Value="0" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
+                <Prop Name="vendor.perf.performancemode.support" Value="true" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="false" />
