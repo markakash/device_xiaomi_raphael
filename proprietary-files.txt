@@ -1050,7 +1050,6 @@ vendor/etc/init/vppservice.rc
 vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/liba2dpoffload.so
-vendor/lib/libbatterylistener.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libexthwplugin.so
 vendor/lib/libhdmiedid.so
