@@ -268,9 +268,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
 
-DEVICE_MANIFEST_FILE := device/qcom/msmnile/manifest.xml
-DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/msmnile/framework_manifest.xml
+DEVICE_MANIFEST_FILE := device/xiaomi/raphael/manifest.xml
+DEVICE_MATRIX_FILE   := device/xiaomi/raphael/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/xiaomi/raphael/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
 #audio related module
@@ -281,12 +281,10 @@ PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl
 
 # MSM IRQ Balancer configuration file
-PRODUCT_COPY_FILES += device/qcom/msmnile/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+PRODUCT_COPY_FILES += device/xiaomi/raphael/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 # Powerhint configuration file
-PRODUCT_COPY_FILES += device/qcom/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
-
+PRODUCT_COPY_FILES += device/xiaomi/raphael/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 # Context hub HAL
 PRODUCT_PACKAGES += \
@@ -332,11 +330,6 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
-ifneq ($(strip $(TARGET_USES_RRO)),true)
-DEVICE_PACKAGE_OVERLAYS += device/qcom/msmnile/overlay
-endif
-
-
 #Enable vndk-sp Libraries
 PRODUCT_PACKAGES += vndk_package
 
@@ -359,12 +352,6 @@ ro.crypto.set_dun = true
 
 # Enable incremental FS feature
 PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
-
-ifneq ($(GENERIC_ODM_IMAGE),true)
-    ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-qva.xml
-else
-    ODM_MANIFEST_FILES += device/qcom/msmnile/manifest-generic.xml
-endif
 
 #Enable Light AIDL HAL
 PRODUCT_PACKAGES += android.hardware.lights-service.qti
